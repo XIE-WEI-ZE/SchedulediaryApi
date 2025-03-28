@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "xMdHTUVVl0dVOe8CP+jmZEQFDINsrjtWpNCUHGYUHzY=",
+  "Source": "SchedulediaryApi",
+  "BasePath": "_content/SchedulediaryApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

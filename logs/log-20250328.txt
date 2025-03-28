@@ -1,0 +1,1248 @@
+2025-03-28 00:30:41.148 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 00:30:41.174 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 00:30:41.247 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 00:30:41.250 +08:00 [INF] Hosting environment: Development
+2025-03-28 00:30:41.253 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 00:30:42.046 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 00:30:42.265 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 227.805ms
+2025-03-28 00:30:42.270 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:30:42.278 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 00:30:42.283 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 13.4213ms
+2025-03-28 00:30:42.318 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.7773ms
+2025-03-28 00:30:42.550 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 00:30:42.568 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.6398ms
+2025-03-28 00:31:24.482 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=2&keyword=meeting - null null
+2025-03-28 00:31:24.494 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 00:31:24.499 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-28 00:31:24.532 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=2&keyword=meeting - 500 null text/plain; charset=utf-8 49.8018ms
+2025-03-28 00:45:05.556 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 00:45:05.602 +08:00 [INF] Creating key {4d1e8918-a072-4e81-8a2d-723d2a63b956} with creation date 2025-03-27 16:45:05Z, activation date 2025-03-27 16:45:05Z, and expiration date 2025-06-25 16:45:05Z.
+2025-03-28 00:45:05.621 +08:00 [INF] Writing data to file 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys\key-4d1e8918-a072-4e81-8a2d-723d2a63b956.xml'.
+2025-03-28 00:45:05.798 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 00:45:05.800 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 00:45:05.916 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 00:45:05.918 +08:00 [INF] Hosting environment: Development
+2025-03-28 00:45:05.920 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 00:45:06.098 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 00:45:06.308 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 215.8078ms
+2025-03-28 00:45:06.314 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:45:06.320 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 00:45:06.329 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 15.0929ms
+2025-03-28 00:45:06.364 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.3609ms
+2025-03-28 00:45:06.557 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 00:45:06.576 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.0356ms
+2025-03-28 00:45:36.498 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 56
+2025-03-28 00:45:36.799 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:45:36.865 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 00:45:37.077 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 00:45:37.718 +08:00 [WRN] 登入失敗：密碼錯誤，Account=test001
+2025-03-28 00:45:37.735 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 644.8573ms.
+2025-03-28 00:45:37.751 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-28 00:45:37.764 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 888.5077ms
+2025-03-28 00:45:37.766 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:45:37.769 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 401 null text/plain; charset=utf-8 1271.8299ms
+2025-03-28 00:45:57.106 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 00:45:57.112 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:45:57.146 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 00:45:57.207 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 00:45:57.312 +08:00 [INF] 登入成功，Account=mzc001, UserId=5
+2025-03-28 00:45:57.318 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 108.2207ms.
+2025-03-28 00:45:57.323 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:45:57.337 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 185.6424ms
+2025-03-28 00:45:57.342 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:45:57.349 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 243.1297ms
+2025-03-28 00:47:51.345 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/register - application/json 204
+2025-03-28 00:47:51.359 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 00:47:51.364 +08:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(SchedulediaryApi.DTOs.RegisterDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 00:47:51.423 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 00:47:51.454 +08:00 [INF] 註冊成功，Account=test004, Name=測試四號
+2025-03-28 00:47:51.461 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.5844ms.
+2025-03-28 00:47:51.465 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-28 00:47:51.469 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) in 101.4564ms
+2025-03-28 00:47:51.501 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 00:47:51.504 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/register - 200 null text/plain; charset=utf-8 158.5467ms
+2025-03-28 00:48:27.928 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 56
+2025-03-28 00:48:27.941 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:48:27.948 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 00:48:27.977 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 00:48:27.997 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 00:48:27.999 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.3806ms.
+2025-03-28 00:48:28.002 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:48:28.005 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 54.8132ms
+2025-03-28 00:48:28.012 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:48:28.013 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 87.2555ms
+2025-03-28 00:49:26.697 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - null null
+2025-03-28 00:49:26.727 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 00:49:26.737 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 00:49:26.758 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - 401 0 null 61.9046ms
+2025-03-28 00:54:42.098 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - null null
+2025-03-28 00:54:42.115 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 00:54:42.116 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 00:54:42.117 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - 401 0 null 20.819ms
+2025-03-28 00:55:42.234 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 56
+2025-03-28 00:55:42.252 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:55:42.254 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 00:55:42.282 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 00:55:42.299 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 00:55:42.301 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16.9369ms.
+2025-03-28 00:55:42.303 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:55:42.305 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 47.876ms
+2025-03-28 00:55:42.307 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 00:55:42.308 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 74.5325ms
+2025-03-28 00:55:50.698 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - null null
+2025-03-28 00:55:50.704 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 00:55:50.706 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 00:55:50.709 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - 401 0 null 11.3248ms
+2025-03-28 01:11:40.327 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 01:11:40.595 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 01:11:40.598 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 01:11:40.663 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 01:11:40.665 +08:00 [INF] Hosting environment: Development
+2025-03-28 01:11:40.667 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 01:11:40.959 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 01:11:41.175 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 224.6998ms
+2025-03-28 01:11:41.182 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 01:11:41.190 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 01:11:41.205 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 23.1593ms
+2025-03-28 01:11:41.241 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.0485ms
+2025-03-28 01:11:41.458 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 01:11:41.474 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.84ms
+2025-03-28 01:11:52.804 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - null null
+2025-03-28 01:11:52.955 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:11:52.976 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:11:52.988 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - 401 0 null 184.3173ms
+2025-03-28 01:11:56.707 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=true - null null
+2025-03-28 01:11:56.744 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:11:56.748 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:11:56.752 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=true - 401 0 null 44.8344ms
+2025-03-28 01:11:59.735 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - null null
+2025-03-28 01:11:59.759 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:11:59.763 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:11:59.765 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting - 401 0 null 30.2081ms
+2025-03-28 01:12:05.692 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - null null
+2025-03-28 01:12:05.715 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:12:05.717 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:12:05.724 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - 401 0 null 32.4515ms
+2025-03-28 01:12:28.637 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=Meeting&includeCompleted=false - null null
+2025-03-28 01:12:28.653 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:12:28.655 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:12:28.658 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=Meeting&includeCompleted=false - 401 0 null 21.1793ms
+2025-03-28 01:13:45.140 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 01:13:45.148 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:13:45.207 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 01:13:45.429 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 01:13:46.071 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 01:13:46.090 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 641.1478ms.
+2025-03-28 01:13:46.109 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 01:13:46.143 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 904.7114ms
+2025-03-28 01:13:46.147 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:13:46.149 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 1009.5914ms
+2025-03-28 01:13:50.241 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=Meeting&includeCompleted=false - null null
+2025-03-28 01:13:50.245 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:13:50.246 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:13:50.249 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=Meeting&includeCompleted=false - 401 0 null 7.941ms
+2025-03-28 01:13:54.854 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=Meeting&includeCompleted=false - null null
+2025-03-28 01:13:54.864 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:13:54.865 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:13:54.867 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=Meeting&includeCompleted=false - 401 0 null 12.8451ms
+2025-03-28 01:15:54.681 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 01:15:54.920 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 01:15:54.922 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 01:15:55.029 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 01:15:55.030 +08:00 [INF] Hosting environment: Development
+2025-03-28 01:15:55.031 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 01:15:55.314 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 01:15:55.581 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 273.3588ms
+2025-03-28 01:15:55.589 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 01:15:55.601 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 01:15:55.609 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 19.5882ms
+2025-03-28 01:15:55.646 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.6983ms
+2025-03-28 01:15:55.795 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 01:15:55.815 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.7575ms
+2025-03-28 01:16:14.195 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 01:16:14.351 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:16:14.394 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 01:16:14.588 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 01:16:15.299 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 01:16:15.308 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 709.5016ms.
+2025-03-28 01:16:15.321 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 01:16:15.344 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 939.9349ms
+2025-03-28 01:16:15.353 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:16:15.356 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 1161.9326ms
+2025-03-28 01:16:31.100 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - null null
+2025-03-28 01:16:31.275 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:16:31.286 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:16:31.289 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - 401 0 null 188.1955ms
+2025-03-28 01:29:31.526 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 01:29:31.799 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 01:29:31.801 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 01:29:31.867 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 01:29:31.868 +08:00 [INF] Hosting environment: Development
+2025-03-28 01:29:31.869 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 01:29:32.221 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 01:29:32.460 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 244.7545ms
+2025-03-28 01:29:32.462 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 01:29:32.468 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 01:29:32.477 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 15.4808ms
+2025-03-28 01:29:32.512 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.9892ms
+2025-03-28 01:29:32.694 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 01:29:32.707 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.2776ms
+2025-03-28 01:30:07.086 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 50
+2025-03-28 01:30:07.261 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:30:07.299 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 01:30:07.534 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 01:30:08.163 +08:00 [WRN] 登入失敗：密碼錯誤，Account=test005
+2025-03-28 01:30:08.174 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 624.2004ms.
+2025-03-28 01:30:08.195 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-28 01:30:08.215 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 899.7777ms
+2025-03-28 01:30:08.221 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:30:08.227 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 401 null text/plain; charset=utf-8 1141.002ms
+2025-03-28 01:30:44.952 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=13&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - null null
+2025-03-28 01:30:45.058 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:30:45.075 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:30:45.080 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=13&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - 401 0 null 128.4908ms
+2025-03-28 01:32:25.927 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 01:32:25.945 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:32:25.957 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 01:32:25.997 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 01:32:26.102 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 01:32:26.107 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 106.2587ms.
+2025-03-28 01:32:26.116 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 01:32:26.132 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 169.3962ms
+2025-03-28 01:32:26.162 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:32:26.167 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 239.3815ms
+2025-03-28 01:33:52.567 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - null null
+2025-03-28 01:33:52.591 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:33:52.594 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:33:52.598 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - 401 0 null 30.8091ms
+2025-03-28 01:38:22.810 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 01:38:23.022 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 01:38:23.025 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 01:38:23.106 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 01:38:23.108 +08:00 [INF] Hosting environment: Development
+2025-03-28 01:38:23.109 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 01:38:23.537 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 01:38:23.758 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 227.2502ms
+2025-03-28 01:38:23.770 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 01:38:23.781 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 01:38:23.785 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 15.9479ms
+2025-03-28 01:38:23.823 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.038ms
+2025-03-28 01:38:24.015 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 01:38:24.041 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.5355ms
+2025-03-28 01:38:43.513 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 01:38:43.680 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:38:43.726 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 01:38:43.958 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 01:38:44.590 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 01:38:44.602 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 627.4528ms.
+2025-03-28 01:38:44.621 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 01:38:44.645 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 904.2155ms
+2025-03-28 01:38:44.649 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:38:44.657 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 1144.0635ms
+2025-03-28 01:43:28.162 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 01:43:28.374 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 01:43:28.375 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 01:43:28.460 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 01:43:28.462 +08:00 [INF] Hosting environment: Development
+2025-03-28 01:43:28.463 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 01:43:28.979 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 01:43:29.191 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 219.1941ms
+2025-03-28 01:43:29.196 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 01:43:29.205 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 01:43:29.211 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 14.8112ms
+2025-03-28 01:43:29.246 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.8639ms
+2025-03-28 01:43:29.418 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 01:43:29.436 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.6799ms
+2025-03-28 01:43:48.374 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 01:43:48.545 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:43:48.623 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 01:43:48.855 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 01:43:49.543 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 01:43:49.556 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 684.6724ms.
+2025-03-28 01:43:49.579 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 01:43:49.605 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 965.8603ms
+2025-03-28 01:43:49.614 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 01:43:49.618 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 1244.409ms
+2025-03-28 01:44:44.108 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - null null
+2025-03-28 01:44:44.160 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:44:44.171 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:44:44.173 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - 401 0 null 64.9936ms
+2025-03-28 01:44:52.881 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - null null
+2025-03-28 01:44:52.897 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 01:44:52.900 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 01:44:52.900 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=meeting&includeCompleted=false - 401 0 null 19.287ms
+2025-03-28 01:50:32.034 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:7134/api/Users/login
+ - null null
+2025-03-28 01:50:32.052 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:7134/api/Users/login
+ - 404 0 null 19.1637ms
+2025-03-28 01:50:32.060 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 01:51:51.603 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - null 0
+2025-03-28 01:51:51.607 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 4.1407ms
+2025-03-28 01:51:51.615 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 01:54:02.059 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - null 0
+2025-03-28 01:54:02.134 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 75.558ms
+2025-03-28 01:54:02.147 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 01:55:53.937 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - application/json 57
+2025-03-28 01:55:53.943 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 9.8361ms
+2025-03-28 01:55:53.946 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 01:57:04.322 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/users/login
+ - application/json 57
+2025-03-28 01:57:04.353 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/users/login
+ - 404 0 null 32.2262ms
+2025-03-28 01:57:04.395 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/users/login%0A, Response status code: 404
+2025-03-28 01:59:09.956 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 01:59:10.194 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 01:59:10.196 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 01:59:10.292 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 01:59:10.293 +08:00 [INF] Hosting environment: Development
+2025-03-28 01:59:10.294 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 01:59:10.599 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 01:59:10.796 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 203.7195ms
+2025-03-28 01:59:10.803 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 01:59:10.809 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 01:59:10.812 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 9.8645ms
+2025-03-28 01:59:10.843 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1518ms
+2025-03-28 01:59:11.092 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 01:59:11.117 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.5378ms
+2025-03-28 01:59:14.817 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - application/json 57
+2025-03-28 01:59:14.888 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 71.8982ms
+2025-03-28 01:59:14.896 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 02:01:08.409 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:01:08.644 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:01:08.647 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:01:08.725 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:01:08.734 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:01:08.739 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:01:09.257 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:01:09.470 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 220.7318ms
+2025-03-28 02:01:09.474 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:01:09.482 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:01:09.485 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 11.0085ms
+2025-03-28 02:01:09.521 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.4276ms
+2025-03-28 02:01:09.783 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:01:09.799 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.798ms
+2025-03-28 02:01:12.327 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - application/json 57
+2025-03-28 02:01:12.406 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 78.7333ms
+2025-03-28 02:01:12.413 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 02:01:13.873 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - application/json 57
+2025-03-28 02:01:13.893 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 20.4901ms
+2025-03-28 02:01:13.916 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 02:02:18.884 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:02:19.092 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:02:19.094 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:02:19.166 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:02:19.167 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:02:19.168 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:02:19.705 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:02:19.905 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 205.4275ms
+2025-03-28 02:02:19.910 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:02:19.921 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:02:19.928 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 17.4858ms
+2025-03-28 02:02:19.963 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.6562ms
+2025-03-28 02:02:20.123 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:02:20.142 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.6005ms
+2025-03-28 02:02:24.401 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - application/json 57
+2025-03-28 02:02:24.485 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 84.2604ms
+2025-03-28 02:02:24.497 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 02:04:02.900 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:04:03.128 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:04:03.129 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:04:03.185 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:04:03.186 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:04:03.187 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:04:03.894 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:04:04.108 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 219.253ms
+2025-03-28 02:04:04.115 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:04:04.124 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:04:04.127 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 12.3865ms
+2025-03-28 02:04:04.163 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.9038ms
+2025-03-28 02:04:04.329 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:04:04.346 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.4819ms
+2025-03-28 02:04:06.625 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - application/json 57
+2025-03-28 02:04:06.681 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+ - 404 0 null 56.5752ms
+2025-03-28 02:04:06.686 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A, Response status code: 404
+2025-03-28 02:11:19.877 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:11:20.103 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:11:20.105 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:11:20.362 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:11:20.364 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:11:20.366 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:11:20.496 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:11:20.704 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 216.9139ms
+2025-03-28 02:11:20.714 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:11:20.716 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:11:20.724 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 9.3762ms
+2025-03-28 02:11:20.757 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.6801ms
+2025-03-28 02:11:20.933 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:11:20.949 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.9543ms
+2025-03-28 02:14:31.300 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:14:31.492 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:14:31.494 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:14:31.550 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:14:31.551 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:14:31.553 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:14:32.153 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:14:32.360 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 211.5086ms
+2025-03-28 02:14:32.380 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:14:32.380 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:14:32.399 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 19.5985ms
+2025-03-28 02:14:32.425 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.86ms
+2025-03-28 02:14:32.623 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:14:32.642 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.4192ms
+2025-03-28 02:17:20.179 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:17:20.423 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:17:20.424 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:17:20.498 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:17:20.499 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:17:20.500 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:17:20.708 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:17:20.922 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 219.1612ms
+2025-03-28 02:17:20.930 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:17:20.930 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:17:20.949 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 19.5109ms
+2025-03-28 02:17:20.970 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.3624ms
+2025-03-28 02:17:21.161 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:17:21.180 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.9525ms
+2025-03-28 02:17:43.245 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:7134/api/Users/login
+
+ - application/json 57
+2025-03-28 02:17:43.387 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:7134/api/Users/login
+
+ - 404 0 null 142.7656ms
+2025-03-28 02:17:43.401 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7134/api/Users/login%0A%0A, Response status code: 404
+2025-03-28 02:25:40.241 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 02:25:40.292 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 02:25:40.373 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 02:25:40.584 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:25:41.241 +08:00 [INF] 登入成功，Account=test004, UserId=10
+2025-03-28 02:25:41.253 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 655.7629ms.
+2025-03-28 02:25:41.277 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 02:25:41.310 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 921.4976ms
+2025-03-28 02:25:41.315 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 02:25:41.317 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 1088.0035ms
+2025-03-28 02:26:38.262 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - null null
+2025-03-28 02:26:38.293 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 02:26:38.304 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 02:26:38.312 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=10&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - 401 0 null 49.8014ms
+2025-03-28 02:29:30.200 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/register - application/json 207
+2025-03-28 02:29:30.224 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 02:29:30.233 +08:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(SchedulediaryApi.DTOs.RegisterDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 02:29:30.296 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:29:30.342 +08:00 [WRN] 註冊失敗：帳號已存在，Account=test005
+2025-03-28 02:29:30.352 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.ConflictObjectResult in 50.2993ms.
+2025-03-28 02:29:30.364 +08:00 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-28 02:29:30.386 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) in 147.5615ms
+2025-03-28 02:29:30.410 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 02:29:30.411 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/register - 409 null text/plain; charset=utf-8 212.2334ms
+2025-03-28 02:29:55.264 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/register - application/json 207
+2025-03-28 02:29:55.303 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 02:29:55.304 +08:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(SchedulediaryApi.DTOs.RegisterDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 02:29:55.343 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:29:55.367 +08:00 [INF] 註冊成功，Account=test006, Name=測試帳號五
+2025-03-28 02:29:55.369 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.9471ms.
+2025-03-28 02:29:55.373 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-28 02:29:55.375 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) in 67.0253ms
+2025-03-28 02:29:55.377 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 02:29:55.385 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/register - 200 null text/plain; charset=utf-8 130.4673ms
+2025-03-28 02:30:15.230 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 02:30:15.235 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 02:30:15.238 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 02:30:15.276 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:30:15.310 +08:00 [INF] 登入成功，Account=test006, UserId=14
+2025-03-28 02:30:15.320 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40.7364ms.
+2025-03-28 02:30:15.328 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 02:30:15.331 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 86.8818ms
+2025-03-28 02:30:15.339 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 02:30:15.342 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 111.9125ms
+2025-03-28 02:32:09.739 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 149
+2025-03-28 02:32:09.756 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 02:32:09.759 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 02:32:09.762 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 401 0 null 23.371ms
+2025-03-28 02:32:20.176 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 146
+2025-03-28 02:32:20.185 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 02:32:20.188 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 02:32:20.191 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 401 0 null 14.5203ms
+2025-03-28 02:33:54.962 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 146
+2025-03-28 02:33:54.982 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 02:33:54.991 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 02:33:54.994 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 401 0 null 34.3616ms
+2025-03-28 02:47:39.730 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:47:39.938 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:47:39.943 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:47:40.040 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:47:40.043 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:47:40.046 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:47:40.366 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:47:40.587 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 231.3926ms
+2025-03-28 02:47:40.594 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:47:40.600 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:47:40.605 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 10.8399ms
+2025-03-28 02:47:40.651 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.4558ms
+2025-03-28 02:47:40.860 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:47:40.880 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.5588ms
+2025-03-28 02:48:29.654 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/register - application/json 204
+2025-03-28 02:48:29.938 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 02:48:29.953 +08:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(SchedulediaryApi.DTOs.RegisterDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 02:48:30.092 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:51:23.702 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:51:23.952 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:51:23.954 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:51:24.030 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:51:24.033 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:51:24.034 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:51:24.486 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:51:24.740 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 257.1129ms
+2025-03-28 02:51:24.745 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:51:24.754 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:51:24.759 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 14.394ms
+2025-03-28 02:51:24.792 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.6607ms
+2025-03-28 02:51:24.950 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:51:24.968 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.307ms
+2025-03-28 02:51:32.165 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/register - application/json 204
+2025-03-28 02:51:32.330 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 02:51:32.373 +08:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(SchedulediaryApi.DTOs.RegisterDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 02:51:32.604 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:51:34.163 +08:00 [INF] 註冊成功，Account=test009, Name=測試用戶
+2025-03-28 02:51:34.170 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1554.789ms.
+2025-03-28 02:51:34.185 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-28 02:51:34.202 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) in 1809.1248ms
+2025-03-28 02:51:34.208 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 02:51:34.211 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/register - 200 null text/plain; charset=utf-8 2045.8293ms
+2025-03-28 02:51:56.456 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 02:51:56.495 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 02:51:56.532 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 02:51:56.580 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:51:57.197 +08:00 [INF] 登入成功，Account=test009, UserId=16
+2025-03-28 02:51:57.202 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 618.313ms.
+2025-03-28 02:51:57.214 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 02:51:57.231 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 695.7824ms
+2025-03-28 02:51:57.238 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 02:51:57.241 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 784.8158ms
+2025-03-28 02:55:11.140 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=16&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - null null
+2025-03-28 02:55:11.280 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 02:55:11.292 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 02:55:11.350 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 02:55:11.358 +08:00 [WRN] 無法解析當前用戶 ID，預設為未授權
+2025-03-28 02:55:11.359 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.ForbidResult in 5.9391ms.
+2025-03-28 02:55:11.381 +08:00 [INF] Executing ForbidResult with authentication schemes (["無權操作此行程"]).
+2025-03-28 02:55:11.406 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 108.9618ms
+2025-03-28 02:55:11.417 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 02:55:11.432 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authentication handler is registered for the scheme '無權操作此行程'. The registered schemes are: Bearer. Did you forget to call AddAuthentication().Add[SomeAuthHandler]("無權操作此行程",...)?
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ForbidAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ForbidResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-28 02:55:11.500 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=16&keyword=%E6%9C%83%E8%AD%B0&includeCompleted=false - 500 null text/plain; charset=utf-8 359.5473ms
+2025-03-28 02:58:28.217 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 02:58:28.451 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 02:58:28.453 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 02:58:28.530 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 02:58:28.532 +08:00 [INF] Hosting environment: Development
+2025-03-28 02:58:28.534 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 02:58:28.936 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 02:58:29.128 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 198.3232ms
+2025-03-28 02:58:29.134 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 02:58:29.141 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 02:58:29.144 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 10.9558ms
+2025-03-28 02:58:29.180 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.4038ms
+2025-03-28 02:58:29.371 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 02:58:29.390 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.4475ms
+2025-03-28 03:00:20.160 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 03:00:20.220 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:00:20.237 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 03:00:20.296 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:06:47.998 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 03:06:48.248 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 03:06:48.251 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 03:06:48.321 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 03:06:48.322 +08:00 [INF] Hosting environment: Development
+2025-03-28 03:06:48.324 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 03:06:49.073 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 03:06:49.304 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 236.921ms
+2025-03-28 03:06:49.310 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 03:06:49.316 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 03:06:49.327 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 17.7793ms
+2025-03-28 03:06:49.359 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.8668ms
+2025-03-28 03:06:49.573 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 03:06:49.590 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.535ms
+2025-03-28 03:07:09.149 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 53
+2025-03-28 03:07:09.286 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:07:09.332 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 03:07:09.532 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:07:10.074 +08:00 [WRN] 登入失敗：帳號不存在，Account=test004g
+2025-03-28 03:07:10.088 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 539.141ms.
+2025-03-28 03:07:10.105 +08:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-03-28 03:07:10.122 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 773.0734ms
+2025-03-28 03:07:10.128 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:07:10.133 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 404 null text/plain; charset=utf-8 983.6511ms
+2025-03-28 03:07:32.003 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 03:07:32.013 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:07:32.037 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 03:07:32.097 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:07:32.207 +08:00 [WRN] 登入失敗：密碼錯誤，Account=test004
+2025-03-28 03:07:32.210 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 110.6006ms.
+2025-03-28 03:07:32.216 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-28 03:07:32.220 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 155.1293ms
+2025-03-28 03:07:32.223 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:07:32.225 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 401 null text/plain; charset=utf-8 221.9754ms
+2025-03-28 03:07:46.099 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 03:07:46.115 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:07:46.124 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 03:07:46.167 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:07:46.234 +08:00 [WRN] 登入失敗：密碼錯誤，Account=test005
+2025-03-28 03:07:46.236 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 65.5407ms.
+2025-03-28 03:07:46.240 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-28 03:07:46.243 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 106.1597ms
+2025-03-28 03:07:46.249 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:07:46.252 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 401 null text/plain; charset=utf-8 153.1242ms
+2025-03-28 03:09:08.216 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/register - application/json 207
+2025-03-28 03:09:08.263 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 03:09:08.273 +08:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(SchedulediaryApi.DTOs.RegisterDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 03:09:08.314 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:09:08.332 +08:00 [WRN] 註冊失敗：帳號已存在，Account=jkldsa1347
+2025-03-28 03:09:08.335 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.ConflictObjectResult in 16.9144ms.
+2025-03-28 03:09:08.337 +08:00 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-28 03:09:08.339 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) in 61.6905ms
+2025-03-28 03:09:08.348 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 03:09:08.351 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/register - 409 null text/plain; charset=utf-8 135.2524ms
+2025-03-28 03:09:21.185 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/register - application/json 207
+2025-03-28 03:09:21.191 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 03:09:21.197 +08:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(SchedulediaryApi.DTOs.RegisterDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 03:09:21.226 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:09:21.964 +08:00 [INF] 註冊成功，Account=jkldsa1437, Name=謝維澤
+2025-03-28 03:09:21.967 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 738.337ms.
+2025-03-28 03:09:21.973 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-28 03:09:21.975 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi) in 773.1742ms
+2025-03-28 03:09:21.978 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Register (SchedulediaryApi)'
+2025-03-28 03:09:21.980 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/register - 200 null text/plain; charset=utf-8 795.2846ms
+2025-03-28 03:09:31.947 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 03:09:31.951 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:09:31.953 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 03:09:31.978 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:09:32.543 +08:00 [INF] 登入成功，Account=jkldsa1437, UserId=17
+2025-03-28 03:09:32.547 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 565.7136ms.
+2025-03-28 03:09:32.550 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 03:09:32.565 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 609.1512ms
+2025-03-28 03:09:32.587 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 03:09:32.592 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 644.5813ms
+2025-03-28 03:09:59.963 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%9C%89&includeCompleted=false - null null
+2025-03-28 03:09:59.995 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 03:10:00.005 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 03:10:00.014 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%9C%89&includeCompleted=false - 401 0 null 51.1519ms
+2025-03-28 03:10:51.097 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 149
+2025-03-28 03:10:51.116 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 03:10:51.123 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 03:10:51.128 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 401 0 null 41.2815ms
+2025-03-28 03:11:56.489 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 149
+2025-03-28 03:11:56.507 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 03:11:56.510 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 03:11:56.512 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 401 0 null 22.6067ms
+2025-03-28 03:13:01.831 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 149
+2025-03-28 03:13:01.962 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 03:13:01.967 +08:00 [INF] Route matched with {action = "Add", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(SchedulediaryApi.DTOs.ScheduleDto) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 03:13:02.025 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 03:13:02.034 +08:00 [WRN] 無法解析當前用戶 ID，預設為未授權
+2025-03-28 03:13:02.036 +08:00 [WRN] 無權操作此行程，UserId=17
+2025-03-28 03:13:02.041 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12.1536ms.
+2025-03-28 03:13:02.047 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-03-28 03:13:02.050 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) in 77.7009ms
+2025-03-28 03:13:02.054 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 03:13:02.056 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 403 null text/plain; charset=utf-8 225.2714ms
+2025-03-28 03:18:05.180 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 03:18:05.395 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 03:18:05.397 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 03:18:05.468 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 03:18:05.470 +08:00 [INF] Hosting environment: Development
+2025-03-28 03:18:05.472 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 03:18:05.994 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 03:18:06.247 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 258.7829ms
+2025-03-28 03:18:06.273 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 03:18:06.273 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 03:18:06.300 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 27.0771ms
+2025-03-28 03:18:06.320 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.5983ms
+2025-03-28 03:18:06.508 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 03:18:06.526 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.4917ms
+2025-03-28 03:19:04.406 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 146
+2025-03-28 03:19:04.579 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 03:19:04.589 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-28 03:19:04.592 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 401 0 null 186.2229ms
+2025-03-28 13:58:13.669 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 13:58:13.866 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 13:58:13.880 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 13:58:13.959 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 13:58:13.962 +08:00 [INF] Hosting environment: Development
+2025-03-28 13:58:13.964 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 13:58:14.617 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 13:58:14.872 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 262.6372ms
+2025-03-28 13:58:14.882 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 13:58:14.882 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 13:58:14.891 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 8.4607ms
+2025-03-28 13:58:14.934 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.1327ms
+2025-03-28 13:58:15.129 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 13:58:15.144 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.771ms
+2025-03-28 14:00:26.151 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 14:00:26.456 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 14:00:26.459 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 14:00:26.521 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 14:00:26.532 +08:00 [INF] Hosting environment: Development
+2025-03-28 14:00:26.542 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 14:00:27.331 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 14:00:27.568 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 244.4646ms
+2025-03-28 14:00:27.575 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 14:00:27.585 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 14:00:27.591 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 16.4578ms
+2025-03-28 14:00:27.634 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.1781ms
+2025-03-28 14:00:27.885 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 14:00:27.899 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.765ms
+2025-03-28 14:00:57.062 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 14:00:57.344 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 14:00:57.346 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 14:00:57.415 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 14:00:57.416 +08:00 [INF] Hosting environment: Development
+2025-03-28 14:00:57.417 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 14:00:57.786 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 14:00:57.992 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 212.2814ms
+2025-03-28 14:00:58.010 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 14:00:58.010 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 14:00:58.019 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 9.1787ms
+2025-03-28 14:00:58.055 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.4211ms
+2025-03-28 14:00:58.230 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 14:00:58.254 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.8368ms
+2025-03-28 14:01:36.224 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 14:01:36.237 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:01:36.433 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:01:36.450 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:01:36.513 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:01:36.938 +08:00 [WRN] 登入失敗：密碼錯誤，Account=test004
+2025-03-28 14:01:36.941 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 423.8057ms.
+2025-03-28 14:01:36.946 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-28 14:01:36.957 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 496.9032ms
+2025-03-28 14:01:36.959 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:01:36.960 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 401 null text/plain; charset=utf-8 736.6713ms
+2025-03-28 14:01:42.611 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 52
+2025-03-28 14:01:42.619 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:01:42.622 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:01:42.624 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:01:42.637 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:01:42.665 +08:00 [WRN] 登入失敗：密碼錯誤，Account=test005
+2025-03-28 14:01:42.666 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 27.2302ms.
+2025-03-28 14:01:42.668 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-28 14:01:42.669 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 43.2513ms
+2025-03-28 14:01:42.671 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:01:42.672 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 401 null text/plain; charset=utf-8 61.8829ms
+2025-03-28 14:01:50.655 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 14:01:50.659 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:01:50.662 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:01:50.663 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:01:50.675 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:01:50.699 +08:00 [WRN] 登入失敗：密碼錯誤，Account=jkldsa1347
+2025-03-28 14:01:50.701 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 23.3519ms.
+2025-03-28 14:01:50.703 +08:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-28 14:01:50.705 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 39.835ms
+2025-03-28 14:01:50.707 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:01:50.709 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 401 null text/plain; charset=utf-8 54.0224ms
+2025-03-28 14:02:09.413 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 14:02:09.421 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:02:09.424 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:02:09.426 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:02:09.437 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:02:09.809 +08:00 [INF] 登入成功，Account=jkldsa1437, UserId=17
+2025-03-28 14:02:09.811 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 371.7418ms.
+2025-03-28 14:02:09.812 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:02:09.817 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 388.3444ms
+2025-03-28 14:02:09.818 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:02:09.819 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 406.8588ms
+2025-03-28 14:03:59.263 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 175
+2025-03-28 14:03:59.273 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:03:59.309 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:03:59.313 +08:00 [INF] Route matched with {action = "Add", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(SchedulediaryApi.DTOs.ScheduleDto) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:03:59.329 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:03:59.331 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:03:59.333 +08:00 [INF] 收到新增行程請求，UserId: 17, Title: 陪媽媽回診
+2025-03-28 14:03:59.355 +08:00 [INF] 成功新增行程，Id: 31, UserId: 17, Title: 陪媽媽回診
+2025-03-28 14:03:59.357 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 27.1992ms.
+2025-03-28 14:03:59.359 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:03:59.362 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) in 47.462ms
+2025-03-28 14:03:59.372 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:03:59.373 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 200 null application/json; charset=utf-8 110.8569ms
+2025-03-28 14:04:49.242 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule?userId=17&date=2025-04-01&sortByPriority=asc - null null
+2025-03-28 14:04:49.255 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetByDate (SchedulediaryApi)'
+2025-03-28 14:04:49.258 +08:00 [INF] Route matched with {action = "GetByDate", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByDate(Int32, System.DateTime, System.Nullable`1[System.Int32], System.String) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:04:49.278 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetByDate (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:04:49.280 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:04:49.281 +08:00 [INF] 收到查詢行程請求，UserId: 17, Date: "2025-04-01T00:00:00.0000000", PriorityLevel: null, SortByPriority: asc
+2025-03-28 14:04:49.297 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetByDate (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 17.9355ms.
+2025-03-28 14:04:49.300 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:04:49.305 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetByDate (SchedulediaryApi) in 44.0013ms
+2025-03-28 14:04:49.308 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetByDate (SchedulediaryApi)'
+2025-03-28 14:04:49.309 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule?userId=17&date=2025-04-01&sortByPriority=asc - 200 null application/json; charset=utf-8 67.615ms
+2025-03-28 14:05:20.085 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/all?userId=17&sortByPriority=asc - null null
+2025-03-28 14:05:20.099 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi)'
+2025-03-28 14:05:20.102 +08:00 [INF] Route matched with {action = "GetAll", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(Int32, System.Nullable`1[System.Int32], System.String) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:05:20.114 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:05:20.116 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:05:20.118 +08:00 [INF] 收到查詢所有行程請求，UserId: 17, PriorityLevel: null, SortByPriority: asc
+2025-03-28 14:05:20.136 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 20.3372ms.
+2025-03-28 14:05:20.139 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:05:20.145 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi) in 40.924ms
+2025-03-28 14:05:20.148 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi)'
+2025-03-28 14:05:20.149 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/all?userId=17&sortByPriority=asc - 200 null application/json; charset=utf-8 64.226ms
+2025-03-28 14:05:57.859 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7134/api/Schedule/31 - application/json 205
+2025-03-28 14:05:57.875 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:05:57.878 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Update (SchedulediaryApi)'
+2025-03-28 14:05:57.881 +08:00 [INF] Route matched with {action = "Update", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(Int32, SchedulediaryApi.DTOs.ScheduleDto) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:05:57.894 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Update (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:05:57.896 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:05:57.898 +08:00 [INF] 收到更新行程請求，Id: 31, UserId: 17
+2025-03-28 14:05:57.907 +08:00 [INF] 成功更新行程，Id: 31, UserId: 17
+2025-03-28 14:05:57.909 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Update (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.4677ms.
+2025-03-28 14:05:57.912 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-28 14:05:57.914 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Update (SchedulediaryApi) in 30.4017ms
+2025-03-28 14:05:57.917 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Update (SchedulediaryApi)'
+2025-03-28 14:05:57.919 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7134/api/Schedule/31 - 200 null text/plain; charset=utf-8 60.0922ms
+2025-03-28 14:06:30.640 +08:00 [INF] Request starting HTTP/2 DELETE https://localhost:7134/api/Schedule/31?userId=17 - null null
+2025-03-28 14:06:30.651 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:06:30.653 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Delete (SchedulediaryApi)'
+2025-03-28 14:06:30.656 +08:00 [INF] Route matched with {action = "Delete", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32, Int32) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:06:30.667 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Delete (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:06:30.669 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:06:30.670 +08:00 [INF] 收到刪除行程請求，Id: 31, UserId: 17
+2025-03-28 14:06:30.682 +08:00 [INF] 成功刪除行程，Id: 31, UserId: 17
+2025-03-28 14:06:30.683 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Delete (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15.1504ms.
+2025-03-28 14:06:30.685 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-28 14:06:30.687 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Delete (SchedulediaryApi) in 28.9432ms
+2025-03-28 14:06:30.688 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Delete (SchedulediaryApi)'
+2025-03-28 14:06:30.690 +08:00 [INF] Request finished HTTP/2 DELETE https://localhost:7134/api/Schedule/31?userId=17 - 200 null text/plain; charset=utf-8 50.1453ms
+2025-03-28 14:07:14.027 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule/complete/32?userId=17 - null 0
+2025-03-28 14:07:14.045 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:07:14.048 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi)'
+2025-03-28 14:07:14.051 +08:00 [INF] Route matched with {action = "Complete", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Complete(Int32, Int32) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:07:14.063 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:07:14.067 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:07:14.070 +08:00 [INF] 收到標記行程為完成請求，Id: 32, UserId: 17
+2025-03-28 14:07:14.105 +08:00 [ERR] 標記行程為完成失敗，Id: 32, UserId: 17
+System.Exception: 無法完成該行程，可能不存在或已完成
+   at SchedulediaryApi.Services.ScheduleRepository.Complete(Int32 id, Int32 userId) in C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi\Services\ScheduleRepository.cs:line 266
+   at SchedulediaryApi.Controllers.ScheduleController.Complete(Int32 id, Int32 userId) in C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi\Controllers\ScheduleController.cs:line 296
+2025-03-28 14:07:14.130 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 63.781ms.
+2025-03-28 14:07:14.132 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-03-28 14:07:14.134 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi) in 80.506ms
+2025-03-28 14:07:14.141 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi)'
+2025-03-28 14:07:14.142 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule/complete/32?userId=17 - 400 null text/plain; charset=utf-8 116.0473ms
+2025-03-28 14:07:39.132 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule/complete/30?userId=10 - null 0
+2025-03-28 14:07:39.144 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:07:39.146 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi)'
+2025-03-28 14:07:39.147 +08:00 [INF] Route matched with {action = "Complete", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Complete(Int32, Int32) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:07:39.158 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:07:39.160 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 10
+2025-03-28 14:07:39.162 +08:00 [WRN] 無權操作此行程，UserId=10
+2025-03-28 14:07:39.164 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.0339ms.
+2025-03-28 14:07:39.166 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-03-28 14:07:39.168 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi) in 19.1697ms
+2025-03-28 14:07:39.170 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi)'
+2025-03-28 14:07:39.171 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule/complete/30?userId=10 - 403 null text/plain; charset=utf-8 40.6738ms
+2025-03-28 14:08:56.238 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 175
+2025-03-28 14:08:56.250 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:08:56.253 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:08:56.255 +08:00 [INF] Route matched with {action = "Add", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(SchedulediaryApi.DTOs.ScheduleDto) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:08:56.267 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:08:56.269 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:08:56.270 +08:00 [INF] 收到新增行程請求，UserId: 17, Title: 模糊搜尋測試
+2025-03-28 14:08:56.282 +08:00 [INF] 成功新增行程，Id: 32, UserId: 17, Title: 模糊搜尋測試
+2025-03-28 14:08:56.284 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14.9612ms.
+2025-03-28 14:08:56.286 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:08:56.287 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) in 29.8622ms
+2025-03-28 14:08:56.295 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:08:56.297 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 200 null application/json; charset=utf-8 58.4202ms
+2025-03-28 14:09:12.050 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule/complete/32?userId=17 - null 0
+2025-03-28 14:09:12.054 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:09:12.055 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi)'
+2025-03-28 14:09:12.056 +08:00 [INF] Route matched with {action = "Complete", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Complete(Int32, Int32) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:09:12.069 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:09:12.070 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:09:12.071 +08:00 [INF] 收到標記行程為完成請求，Id: 32, UserId: 17
+2025-03-28 14:09:12.080 +08:00 [INF] 成功標記行程為完成，Id: 32, UserId: 17
+2025-03-28 14:09:12.082 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11.7786ms.
+2025-03-28 14:09:12.084 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-28 14:09:12.088 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi) in 28.4694ms
+2025-03-28 14:09:12.090 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Complete (SchedulediaryApi)'
+2025-03-28 14:09:12.091 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule/complete/32?userId=17 - 200 null text/plain; charset=utf-8 41.4963ms
+2025-03-28 14:09:56.774 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%B8%AC%E8%A9%A6&includeCompleted=false - null null
+2025-03-28 14:09:56.787 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:09:56.791 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:09:56.810 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:09:56.812 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:09:56.814 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 測試, IncludeCompleted: false
+2025-03-28 14:09:56.848 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 36.4818ms.
+2025-03-28 14:09:56.852 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:09:56.855 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 61.0743ms
+2025-03-28 14:09:56.868 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:09:56.870 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%B8%AC%E8%A9%A6&includeCompleted=false - 200 null application/json; charset=utf-8 96.394ms
+2025-03-28 14:10:13.564 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=false - null null
+2025-03-28 14:10:13.577 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:10:13.579 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:10:13.591 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:10:13.592 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:10:13.594 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 模糊, IncludeCompleted: false
+2025-03-28 14:10:13.596 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.0433ms.
+2025-03-28 14:10:13.600 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:10:13.602 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 20.4612ms
+2025-03-28 14:10:13.604 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:10:13.606 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=false - 200 null application/json; charset=utf-8 42.9808ms
+2025-03-28 14:11:02.673 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - null null
+2025-03-28 14:11:02.682 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:11:02.683 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:11:02.693 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:11:02.694 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:11:02.695 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 模糊, IncludeCompleted: true
+2025-03-28 14:11:02.710 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16.2666ms.
+2025-03-28 14:11:02.713 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:11:02.714 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 29.8779ms
+2025-03-28 14:11:02.721 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:11:02.722 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - 200 null application/json; charset=utf-8 48.8257ms
+2025-03-28 14:12:01.907 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 184
+2025-03-28 14:12:01.920 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:12:01.921 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:12:01.923 +08:00 [INF] Route matched with {action = "Add", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(SchedulediaryApi.DTOs.ScheduleDto) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:12:01.935 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:12:01.936 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:12:01.938 +08:00 [INF] 收到新增行程請求，UserId: 17, Title: 模糊搜尋二測試
+2025-03-28 14:12:01.956 +08:00 [INF] 成功新增行程，Id: 33, UserId: 17, Title: 模糊搜尋二測試
+2025-03-28 14:12:01.959 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.7497ms.
+2025-03-28 14:12:01.961 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:12:01.965 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) in 39.9857ms
+2025-03-28 14:12:01.977 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:12:01.979 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 200 null application/json; charset=utf-8 71.3132ms
+2025-03-28 14:12:06.217 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - null null
+2025-03-28 14:12:06.222 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:12:06.223 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:12:06.238 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:12:06.240 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:12:06.242 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 模糊, IncludeCompleted: true
+2025-03-28 14:12:06.252 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11.5849ms.
+2025-03-28 14:12:06.254 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:12:06.256 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 30.3079ms
+2025-03-28 14:12:06.257 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:12:06.259 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - 200 null application/json; charset=utf-8 41.3659ms
+2025-03-28 14:16:25.872 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 14:16:26.093 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 14:16:26.096 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 14:16:26.158 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 14:16:26.160 +08:00 [INF] Hosting environment: Development
+2025-03-28 14:16:26.162 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 14:16:26.715 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 14:16:26.918 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 207.7951ms
+2025-03-28 14:16:26.928 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 14:16:26.932 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 14:16:26.938 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 9.4043ms
+2025-03-28 14:16:26.967 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.2301ms
+2025-03-28 14:16:27.157 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 14:16:27.171 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.2678ms
+2025-03-28 14:16:49.900 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 14:16:49.913 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:16:49.959 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:16:49.974 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:16:50.028 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:16:50.602 +08:00 [INF] 登入成功，Account=jkldsa1437, UserId=17
+2025-03-28 14:16:50.606 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 573.0292ms.
+2025-03-28 14:16:50.611 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:16:50.620 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 640.8469ms
+2025-03-28 14:16:50.622 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:16:50.624 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 724.4831ms
+2025-03-28 14:19:42.041 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Schedule - application/json 164
+2025-03-28 14:19:42.047 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:19:42.119 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:19:42.124 +08:00 [INF] Route matched with {action = "Add", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(SchedulediaryApi.DTOs.ScheduleDto) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:19:42.170 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:19:42.174 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:19:42.181 +08:00 [INF] 收到新增行程請求，UserId: 17, Title: 第三筆模糊資料
+2025-03-28 14:19:42.215 +08:00 [INF] 成功新增行程，Id: 34, UserId: 17, Title: 第三筆模糊資料
+2025-03-28 14:19:42.219 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 47.5006ms.
+2025-03-28 14:19:42.222 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:19:42.227 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi) in 100.981ms
+2025-03-28 14:19:42.232 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Add (SchedulediaryApi)'
+2025-03-28 14:19:42.233 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Schedule - 200 null application/json; charset=utf-8 222.973ms
+2025-03-28 14:20:06.776 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=false - null null
+2025-03-28 14:20:06.807 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:06.831 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:20:06.884 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:20:06.890 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:20:06.893 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 模糊, IncludeCompleted: false
+2025-03-28 14:20:06.913 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.8134ms.
+2025-03-28 14:20:06.921 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:20:06.943 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 109.2094ms
+2025-03-28 14:20:06.965 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:06.968 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=false - 200 null application/json; charset=utf-8 191.8007ms
+2025-03-28 14:20:12.648 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - null null
+2025-03-28 14:20:12.664 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:12.668 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:20:12.721 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:20:12.726 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:20:12.734 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 模糊, IncludeCompleted: true
+2025-03-28 14:20:12.741 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15.5799ms.
+2025-03-28 14:20:12.749 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:20:12.755 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 82.0794ms
+2025-03-28 14:20:12.764 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:12.769 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - 200 null application/json; charset=utf-8 121.5765ms
+2025-03-28 14:20:20.024 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=false - null null
+2025-03-28 14:20:20.034 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:20.037 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:20:20.084 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:20:20.090 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:20:20.097 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 模糊, IncludeCompleted: false
+2025-03-28 14:20:20.106 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16.2796ms.
+2025-03-28 14:20:20.112 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:20:20.118 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 78.5235ms
+2025-03-28 14:20:20.141 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:20.144 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=false - 200 null application/json; charset=utf-8 120.189ms
+2025-03-28 14:20:36.528 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - null null
+2025-03-28 14:20:36.555 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:36.558 +08:00 [INF] Route matched with {action = "Search", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(Int32, System.String, System.Nullable`1[System.Boolean]) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:20:36.595 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:20:36.599 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:20:36.602 +08:00 [INF] 收到模糊搜尋請求，UserId: 17, Keyword: 模糊, IncludeCompleted: true
+2025-03-28 14:20:36.621 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.214ms.
+2025-03-28 14:20:36.623 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:20:36.625 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi) in 62.4333ms
+2025-03-28 14:20:36.629 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.Search (SchedulediaryApi)'
+2025-03-28 14:20:36.632 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/search?userId=17&keyword=%E6%A8%A1%E7%B3%8A&includeCompleted=true - 200 null application/json; charset=utf-8 104.1416ms
+2025-03-28 14:27:49.055 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 14:27:49.272 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 14:27:49.274 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 14:27:49.333 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 14:27:49.335 +08:00 [INF] Hosting environment: Development
+2025-03-28 14:27:49.337 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 14:27:49.993 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 14:27:50.246 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 257.0783ms
+2025-03-28 14:27:50.253 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 14:27:50.264 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 14:27:50.267 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 14.6549ms
+2025-03-28 14:27:50.306 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.3344ms
+2025-03-28 14:27:50.479 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 14:27:50.499 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.0156ms
+2025-03-28 14:28:19.428 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 14:28:19.436 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:28:19.486 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:28:19.502 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:28:19.564 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:28:20.153 +08:00 [INF] 登入成功，Account=jkldsa1437, UserId=17
+2025-03-28 14:28:20.156 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 588.3737ms.
+2025-03-28 14:28:20.162 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:28:20.170 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 663.3774ms
+2025-03-28 14:28:20.171 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:28:20.173 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 745.1643ms
+2025-03-28 14:28:55.385 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/completed?userId=17 - null null
+2025-03-28 14:28:55.550 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi)'
+2025-03-28 14:28:55.557 +08:00 [INF] Route matched with {action = "GetCompleted", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompleted(Int32) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:28:55.612 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:28:55.617 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:28:55.619 +08:00 [INF] 收到查詢已完成行程請求，UserId: 17
+2025-03-28 14:28:55.637 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.6805ms.
+2025-03-28 14:28:55.642 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:28:55.658 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi) in 97.0683ms
+2025-03-28 14:28:55.663 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi)'
+2025-03-28 14:28:55.664 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/completed?userId=17 - 200 null application/json; charset=utf-8 279.2779ms
+2025-03-28 14:32:43.404 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 14:32:43.612 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 14:32:43.614 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 14:32:43.676 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 14:32:43.681 +08:00 [INF] Hosting environment: Development
+2025-03-28 14:32:43.683 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 14:32:43.983 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 14:32:44.218 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 240.1211ms
+2025-03-28 14:32:44.224 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 14:32:44.230 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 14:32:44.237 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 13.5124ms
+2025-03-28 14:32:44.273 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.7997ms
+2025-03-28 14:32:44.500 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 14:32:44.524 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.6288ms
+2025-03-28 14:33:08.955 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 14:33:08.974 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:33:09.028 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:33:09.043 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:33:09.101 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:33:09.665 +08:00 [INF] 登入成功，Account=jkldsa1437, UserId=17
+2025-03-28 14:33:09.668 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 563.1284ms.
+2025-03-28 14:33:09.674 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:33:09.681 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 632.0838ms
+2025-03-28 14:33:09.683 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:33:09.684 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 729.618ms
+2025-03-28 14:34:06.192 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/date?userId=17&date=2025-03-27&isCompleted=true - null null
+2025-03-28 14:34:06.341 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi)'
+2025-03-28 14:34:06.348 +08:00 [INF] Route matched with {action = "GetByDateWithCompletion", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByDateWithCompletion(Int32, System.DateTime, Boolean) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:34:06.405 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:34:06.412 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:34:06.416 +08:00 [INF] 查詢某日行程，UserId=17, Date=2025/3/27, 已完成=true
+2025-03-28 14:34:06.469 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 61.062ms.
+2025-03-28 14:34:06.473 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:34:06.482 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi) in 132.715ms
+2025-03-28 14:34:06.486 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi)'
+2025-03-28 14:34:06.487 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/date?userId=17&date=2025-03-27&isCompleted=true - 200 null application/json; charset=utf-8 295.1036ms
+2025-03-28 14:34:16.912 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/all?userId=17&sortByPriority=asc - null null
+2025-03-28 14:34:16.931 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi)'
+2025-03-28 14:34:16.937 +08:00 [INF] Route matched with {action = "GetAll", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(Int32, System.Nullable`1[System.Int32], System.String) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:34:16.977 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:34:16.980 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:34:16.982 +08:00 [INF] 收到查詢所有行程請求，UserId: 17, PriorityLevel: null, SortByPriority: asc
+2025-03-28 14:34:16.993 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.1669ms.
+2025-03-28 14:34:16.995 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:34:17.000 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi) in 57.1525ms
+2025-03-28 14:34:17.003 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetAll (SchedulediaryApi)'
+2025-03-28 14:34:17.005 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/all?userId=17&sortByPriority=asc - 200 null application/json; charset=utf-8 93.6299ms
+2025-03-28 14:34:37.192 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/completed?userId=17 - null null
+2025-03-28 14:34:37.197 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi)'
+2025-03-28 14:34:37.200 +08:00 [INF] Route matched with {action = "GetCompleted", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompleted(Int32) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:34:37.214 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:34:37.216 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:34:37.218 +08:00 [INF] 收到查詢已完成行程請求，UserId: 17
+2025-03-28 14:34:37.223 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.2714ms.
+2025-03-28 14:34:37.225 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:34:37.227 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi) in 24.3739ms
+2025-03-28 14:34:37.228 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetCompleted (SchedulediaryApi)'
+2025-03-28 14:34:37.229 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/completed?userId=17 - 200 null application/json; charset=utf-8 37.3997ms
+2025-03-28 14:34:48.597 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/date?userId=17&date=2025-04-01&isCompleted=true - null null
+2025-03-28 14:34:48.601 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi)'
+2025-03-28 14:34:48.603 +08:00 [INF] Route matched with {action = "GetByDateWithCompletion", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByDateWithCompletion(Int32, System.DateTime, Boolean) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:34:48.636 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:34:48.643 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:34:48.647 +08:00 [INF] 查詢某日行程，UserId=17, Date=2025/4/1, 已完成=true
+2025-03-28 14:34:48.671 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.281ms.
+2025-03-28 14:34:48.674 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.ScheduleItem, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:34:48.675 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi) in 69.4054ms
+2025-03-28 14:34:48.677 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetByDateWithCompletion (SchedulediaryApi)'
+2025-03-28 14:34:48.682 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/date?userId=17&date=2025-04-01&isCompleted=true - 200 null application/json; charset=utf-8 85.3969ms
+2025-03-28 14:40:27.923 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 14:40:28.136 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 14:40:28.138 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 14:40:28.204 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 14:40:28.205 +08:00 [INF] Hosting environment: Development
+2025-03-28 14:40:28.207 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 14:40:28.442 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 14:40:28.663 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 228.2218ms
+2025-03-28 14:40:28.680 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 14:40:28.680 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 14:40:28.690 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 10.8108ms
+2025-03-28 14:40:28.726 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.5563ms
+2025-03-28 14:40:28.896 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 14:40:28.916 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.8419ms
+2025-03-28 14:40:53.006 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 14:40:53.017 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:40:53.065 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:40:53.080 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:40:53.136 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:40:53.689 +08:00 [INF] 登入成功，Account=jkldsa1437, UserId=17
+2025-03-28 14:40:53.693 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 553.05ms.
+2025-03-28 14:40:53.698 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:40:53.706 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 620.2234ms
+2025-03-28 14:40:53.708 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:40:53.709 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 703.3199ms
+2025-03-28 14:41:53.841 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/stats?userId=17&date=2025-04-01 - null null
+2025-03-28 14:41:53.997 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetDailyStats (SchedulediaryApi)'
+2025-03-28 14:41:54.009 +08:00 [INF] Route matched with {action = "GetDailyStats", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDailyStats(Int32, System.DateTime) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:41:54.104 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetDailyStats (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:41:54.121 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:41:54.137 +08:00 [INF] 查詢統計資料，UserId=17, Date="2025-04-01T00:00:00.0000000"
+2025-03-28 14:41:54.172 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetDailyStats (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 58.8502ms.
+2025-03-28 14:41:54.181 +08:00 [INF] Executing OkObjectResult, writing value of type 'SchedulediaryApi.Models.DailyStats'.
+2025-03-28 14:41:54.214 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetDailyStats (SchedulediaryApi) in 194.6328ms
+2025-03-28 14:41:54.227 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetDailyStats (SchedulediaryApi)'
+2025-03-28 14:41:54.230 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/stats?userId=17&date=2025-04-01 - 200 null application/json; charset=utf-8 396.9954ms
+2025-03-28 14:44:08.885 +08:00 [INF] User profile is available. Using 'C:\Users\jklds\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 14:44:09.079 +08:00 [INF] Now listening on: https://localhost:7134
+2025-03-28 14:44:09.080 +08:00 [INF] Now listening on: http://localhost:5119
+2025-03-28 14:44:09.143 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 14:44:09.146 +08:00 [INF] Hosting environment: Development
+2025-03-28 14:44:09.148 +08:00 [INF] Content root path: C:\Users\jklds\OneDrive\程式相關\作品\全端作品集\SchedulediaryApi\SchedulediaryApi
+2025-03-28 14:44:09.798 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/index.html - null null
+2025-03-28 14:44:10.030 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/index.html - 200 null text/html;charset=utf-8 238.064ms
+2025-03-28 14:44:10.035 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 14:44:10.046 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/_vs/browserLink - null null
+2025-03-28 14:44:10.046 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 11.6543ms
+2025-03-28 14:44:10.082 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.0341ms
+2025-03-28 14:44:10.239 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - null null
+2025-03-28 14:44:10.255 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.2192ms
+2025-03-28 14:44:34.378 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7134/api/Users/login - application/json 55
+2025-03-28 14:44:34.400 +08:00 [INF] CORS policy execution successful.
+2025-03-28 14:44:34.451 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:44:34.471 +08:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SchedulediaryApi.DTOs.LoginDto) on controller SchedulediaryApi.Controllers.UsersController (SchedulediaryApi).
+2025-03-28 14:44:34.532 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:44:35.128 +08:00 [INF] 登入成功，Account=jkldsa1437, UserId=17
+2025-03-28 14:44:35.132 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 592.7809ms.
+2025-03-28 14:44:35.138 +08:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 14:44:35.147 +08:00 [INF] Executed action SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi) in 667.6495ms
+2025-03-28 14:44:35.149 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.UsersController.Login (SchedulediaryApi)'
+2025-03-28 14:44:35.150 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7134/api/Users/login - 200 null application/json; charset=utf-8 772.7231ms
+2025-03-28 14:45:18.114 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7134/api/Schedule/monthly-stats?userId=17&year=2025&month=4 - null null
+2025-03-28 14:45:18.280 +08:00 [INF] Executing endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetMonthlyStats (SchedulediaryApi)'
+2025-03-28 14:45:18.291 +08:00 [INF] Route matched with {action = "GetMonthlyStats", controller = "Schedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetMonthlyStats(Int32, Int32, Int32) on controller SchedulediaryApi.Controllers.ScheduleController (SchedulediaryApi).
+2025-03-28 14:45:18.393 +08:00 [INF] Executing action method SchedulediaryApi.Controllers.ScheduleController.GetMonthlyStats (SchedulediaryApi) - Validation state: "Valid"
+2025-03-28 14:45:18.410 +08:00 [INF] JWT subClaim: 17，傳入的 userId: 17
+2025-03-28 14:45:18.429 +08:00 [INF] 查詢整月統計：UserId=17, Year=2025, Month=4
+2025-03-28 14:45:18.501 +08:00 [INF] Executed action method SchedulediaryApi.Controllers.ScheduleController.GetMonthlyStats (SchedulediaryApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 93.2733ms.
+2025-03-28 14:45:18.506 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchedulediaryApi.Models.DailyStats, SchedulediaryApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 14:45:18.521 +08:00 [INF] Executed action SchedulediaryApi.Controllers.ScheduleController.GetMonthlyStats (SchedulediaryApi) in 227.0419ms
+2025-03-28 14:45:18.524 +08:00 [INF] Executed endpoint 'SchedulediaryApi.Controllers.ScheduleController.GetMonthlyStats (SchedulediaryApi)'
+2025-03-28 14:45:18.526 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7134/api/Schedule/monthly-stats?userId=17&year=2025&month=4 - 200 null application/json; charset=utf-8 412.5549ms
