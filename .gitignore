@@ -1,11 +1,50 @@
+# Build results
 bin/
 obj/
+*.exe
+*.dll
+
+# User-specific files
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
+# VS Code settings
 .vscode/
-.env
+
+# Logs
+*.log
+
+# Dotnet generated files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET temporary files
+**/Generated_Code/
+
+# Visual Studio files
+.vs/
+
+# Publish output
+wwwroot/dist/
+wwwroot/node_modules/
+dist/
+node_modules/
+
+# Mac / Linux
+.DS_Store
+Thumbs.db
+
+# Secrets
 appsettings.Development.json
-logs/
+appsettings.Local.json
+secrets.json
+
+# Rider
+.idea/
+
+# Others
+*.db
+*.bak
