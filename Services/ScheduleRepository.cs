@@ -411,5 +411,25 @@ namespace SchedulediaryApi.Services
                 Category = reader["Category"]?.ToString() ?? ""
             };
         }
+
+        public ScheduleItem? GetById(int id, int userId)
+        {
+            using var conn = new SqlConnection(_connStr);
+            using var cmd = new SqlCommand(@"
+        SELECT * FROM ToDoEvents WHERE ToDoId = @Id AND UserId = @UserId
+    ", conn);
+
+            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+            cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
+
+            conn.Open();
+            using var reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return ReadScheduleItem(reader);
+            }
+            return null;
+        }
+
     }
 }

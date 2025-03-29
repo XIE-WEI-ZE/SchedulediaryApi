@@ -35,19 +35,19 @@ namespace SchedulediaryApi.Controllers
                 string.IsNullOrWhiteSpace(dto.Email))
             {
                 _logger.LogWarning("註冊失敗：欄位未填寫完整");
-                return BadRequest("請填寫所有必填欄位");
+                return BadRequest(new { message = "請填寫所有必填欄位" });
             }
 
             if (dto.Password != dto.ConfirmPassword)
             {
                 _logger.LogWarning("註冊失敗：密碼不一致，Account={Account}", dto.Account);
-                return BadRequest("兩次輸入的密碼不一致");
+                return BadRequest(new { message = "兩次輸入的密碼不一致" });
             }
 
             if (_userRepo.IsAccountExist(dto.Account))
             {
                 _logger.LogWarning("註冊失敗：帳號已存在，Account={Account}", dto.Account);
-                return Conflict("帳號已存在");
+                return Conflict(new { message = "帳號已存在" });
             }
 
             // 使用 bcrypt 哈希密碼
@@ -66,7 +66,7 @@ namespace SchedulediaryApi.Controllers
 
             _userRepo.Register(user);
             _logger.LogInformation("註冊成功，Account={Account}, Name={Name}", user.Account, user.Name);
-            return Ok("註冊成功");
+            return Ok(new { message = "註冊成功" });
         }
 
         [HttpPost("login")]
@@ -76,7 +76,7 @@ namespace SchedulediaryApi.Controllers
             if (user == null)
             {
                 _logger.LogWarning("登入失敗：帳號不存在，Account={Account}", dto.Account);
-                return NotFound("帳號不存在");
+                return NotFound(new { message = "帳號不存在" });
             }
 
             // 使用 bcrypt 驗證密碼
@@ -84,7 +84,7 @@ namespace SchedulediaryApi.Controllers
             if (!valid)
             {
                 _logger.LogWarning("登入失敗：密碼錯誤，Account={Account}", dto.Account);
-                return Unauthorized("密碼錯誤");
+                return Unauthorized(new { message = "密碼錯誤" });
             }
 
             var token = GenerateJwtToken(user);
