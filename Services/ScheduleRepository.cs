@@ -39,10 +39,15 @@ namespace SchedulediaryApi.Services
         {
             using var conn = new SqlConnection(_connStr);
             using var cmd = new SqlCommand(@"
-                UPDATE ToDoEvents 
-                SET DueDateTime = @DueDateTime, Title = @Title, Description = @Description, PriorityLevel = @PriorityLevel, Category = @Category
-                WHERE ToDoId = @Id AND UserId = @UserId
-            ", conn);
+        UPDATE ToDoEvents 
+        SET DueDateTime = @DueDateTime, 
+            Title = @Title, 
+            Description = @Description, 
+            PriorityLevel = @PriorityLevel, 
+            Category = @Category,
+            IsCompleted = @IsCompleted
+        WHERE ToDoId = @Id AND UserId = @UserId
+    ", conn);
 
             cmd.Parameters.Add("@Id", SqlDbType.Int).Value = item.Id;
             cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = item.UserId;
@@ -51,6 +56,7 @@ namespace SchedulediaryApi.Services
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 500).Value = item.Content;
             cmd.Parameters.Add("@PriorityLevel", SqlDbType.Int).Value = item.PriorityLevel;
             cmd.Parameters.Add("@Category", SqlDbType.NVarChar, 50).Value = item.Category ?? "";
+            cmd.Parameters.Add("@IsCompleted", SqlDbType.Bit).Value = item.IsCompleted; // 新增這行
 
             conn.Open();
             int rowsAffected = cmd.ExecuteNonQuery();
@@ -58,80 +64,190 @@ namespace SchedulediaryApi.Services
                 throw new Exception("行程不存在或無權更新");
         }
 
-        // Search 方法（與之前修正一致）
-        public List<ScheduleItem> Search(int userId, string keyword, bool includeCompleted)
+        // Search 方法
+        public (List<ScheduleItem> Data, int TotalCount) Search(
+            int userId,
+            string keyword,
+            bool includeCompleted,
+            DateTime? startDate,
+            DateTime? endDate,
+            int? priorityLevel,
+            string tag,
+            string searchType,
+            int page = 1,
+            int pageSize = 10)
         {
             var list = new List<ScheduleItem>();
+            int totalCount = 0;
+
             using var conn = new SqlConnection(_connStr);
             using var cmd = new SqlCommand(@"
-                SELECT * FROM ToDoEvents
-                WHERE UserId = @UserId
-                AND (Title LIKE @Keyword OR Description LIKE @Keyword OR Category LIKE @Keyword)
-                AND (@IncludeCompleted = 1 OR IsCompleted = 0)
-                ORDER BY DueDateTime
-            ", conn);
+        WITH Filtered AS (
+            SELECT *,
+                   COUNT(*) OVER () AS TotalCount
+            FROM ToDoEvents
+            WHERE UserId = @UserId
+            AND (@IncludeCompleted = 1 OR IsCompleted = 0)
+            AND (@Keyword IS NULL OR (
+                (@SearchType = 'any' AND (Title LIKE @Keyword OR Description LIKE @Keyword OR Category LIKE @Keyword))
+                OR (@SearchType = 'title' AND Title LIKE @Keyword)
+                OR (@SearchType = 'content' AND Description LIKE @Keyword)
+                OR (@SearchType = 'tag' AND Category LIKE @Keyword)
+            ))
+            AND (@StartDate IS NULL OR DueDateTime >= @StartDate)
+            AND (@EndDate IS NULL OR DueDateTime <= @EndDate)
+            AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
+            AND (@Tag IS NULL OR Category LIKE @Tag)
+        )
+        SELECT * FROM Filtered
+        ORDER BY DueDateTime
+        OFFSET @Offset ROWS
+        FETCH NEXT @PageSize ROWS ONLY
+    ", conn);
 
             cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
-            cmd.Parameters.Add("@Keyword", SqlDbType.NVarChar).Value = $"%{keyword}%";
+            cmd.Parameters.Add("@Keyword", SqlDbType.NVarChar).Value = string.IsNullOrEmpty(keyword) ? DBNull.Value : $"%{keyword}%";
             cmd.Parameters.Add("@IncludeCompleted", SqlDbType.Bit).Value = includeCompleted;
+            cmd.Parameters.Add("@StartDate", SqlDbType.DateTime).Value = startDate.HasValue ? startDate.Value : DBNull.Value;
+            cmd.Parameters.Add("@EndDate", SqlDbType.DateTime).Value = endDate.HasValue ? endDate.Value : DBNull.Value;
+            cmd.Parameters.Add("@PriorityLevel", SqlDbType.Int).Value = priorityLevel.HasValue ? priorityLevel.Value : DBNull.Value;
+            cmd.Parameters.Add("@Tag", SqlDbType.NVarChar).Value = string.IsNullOrEmpty(tag) ? DBNull.Value : $"%#{tag}%";
+            cmd.Parameters.Add("@SearchType", SqlDbType.NVarChar).Value = searchType;
+            cmd.Parameters.Add("@Offset", SqlDbType.Int).Value = (page - 1) * pageSize;
+            cmd.Parameters.Add("@PageSize", SqlDbType.Int).Value = pageSize;
 
             conn.Open();
             using var reader = cmd.ExecuteReader();
-            while (reader.Read())
+            if (reader.HasRows)
             {
-                list.Add(ReadScheduleItem(reader));
+                while (reader.Read())
+                {
+                    list.Add(ReadScheduleItem(reader));
+                    if (list.Count == 1) // 只在第一行取 TotalCount
+                        totalCount = reader.GetInt32(reader.GetOrdinal("TotalCount"));
+                }
             }
-            return list;
+            else
+            {
+                // 若無資料，執行獨立查詢取得總筆數
+                using var countCmd = new SqlCommand(@"
+            SELECT COUNT(*) FROM ToDoEvents
+            WHERE UserId = @UserId
+            AND (@IncludeCompleted = 1 OR IsCompleted = 0)
+            AND (@Keyword IS NULL OR (
+                (@SearchType = 'any' AND (Title LIKE @Keyword OR Description LIKE @Keyword OR Category LIKE @Keyword))
+                OR (@SearchType = 'title' AND Title LIKE @Keyword)
+                OR (@SearchType = 'content' AND Description LIKE @Keyword)
+                OR (@SearchType = 'tag' AND Category LIKE @Keyword)
+            ))
+            AND (@StartDate IS NULL OR DueDateTime >= @StartDate)
+            AND (@EndDate IS NULL OR DueDateTime <= @EndDate)
+            AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
+            AND (@Tag IS NULL OR Category LIKE @Tag)
+        ", conn);
+                countCmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
+                countCmd.Parameters.Add("@Keyword", SqlDbType.NVarChar).Value = string.IsNullOrEmpty(keyword) ? DBNull.Value : $"%{keyword}%";
+                countCmd.Parameters.Add("@IncludeCompleted", SqlDbType.Bit).Value = includeCompleted;
+                countCmd.Parameters.Add("@StartDate", SqlDbType.DateTime).Value = startDate.HasValue ? startDate.Value : DBNull.Value;
+                countCmd.Parameters.Add("@EndDate", SqlDbType.DateTime).Value = endDate.HasValue ? endDate.Value : DBNull.Value;
+                countCmd.Parameters.Add("@PriorityLevel", SqlDbType.Int).Value = priorityLevel.HasValue ? priorityLevel.Value : DBNull.Value;
+                countCmd.Parameters.Add("@Tag", SqlDbType.NVarChar).Value = string.IsNullOrEmpty(tag) ? DBNull.Value : $"%#{tag}%";
+                countCmd.Parameters.Add("@SearchType", SqlDbType.NVarChar).Value = searchType;
+                totalCount = (int)countCmd.ExecuteScalar();
+            }
+
+            return (list, totalCount);
         }
 
-        // 其他方法保持不變（假設已正確定義）
-        public List<ScheduleItem> GetByDate(int userId, DateTime date, int? priorityLevel = null, string sortByPriority = "asc")
+        // 依造日期
+        public (List<ScheduleItem> Data, int TotalCount) GetByDate(
+          int userId,
+          DateTime date,
+          int? priorityLevel = null,
+          string sortByPriority = "asc",
+          bool? isCompleted = null,
+          int page = 1,
+          int pageSize = 10)
         {
             var list = new List<ScheduleItem>();
+            int totalCount = 0;
+
             using var conn = new SqlConnection(_connStr);
             using var cmd = new SqlCommand(@"
-                SELECT * FROM ToDoEvents
-                WHERE UserId = @UserId 
-                AND CONVERT(date, DueDateTime) = @Date 
-                AND IsCompleted = 0
-                AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
-                ORDER BY PriorityLevel " + (string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC"), conn);
+        WITH Filtered AS (
+            SELECT *,
+                   COUNT(*) OVER () AS TotalCount
+            FROM ToDoEvents
+            WHERE UserId = @UserId 
+            AND CONVERT(date, DueDateTime) = @Date 
+            AND (@IsCompleted IS NULL OR IsCompleted = @IsCompleted)
+            AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
+        )
+        SELECT * FROM Filtered
+        ORDER BY PriorityLevel " + (string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC") + @"
+        OFFSET @Offset ROWS
+        FETCH NEXT @PageSize ROWS ONLY
+    ", conn);
 
             cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
             cmd.Parameters.Add("@Date", SqlDbType.Date).Value = date.Date;
             cmd.Parameters.Add("@PriorityLevel", SqlDbType.Int).Value = (object?)priorityLevel ?? DBNull.Value;
+            cmd.Parameters.Add("@IsCompleted", SqlDbType.Bit).Value = (object?)isCompleted ?? DBNull.Value;
+            cmd.Parameters.Add("@Offset", SqlDbType.Int).Value = (page - 1) * pageSize;
+            cmd.Parameters.Add("@PageSize", SqlDbType.Int).Value = pageSize;
 
             conn.Open();
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 list.Add(ReadScheduleItem(reader));
+                if (list.Count == 1) totalCount = reader.GetInt32(reader.GetOrdinal("TotalCount"));
             }
-            return list;
+
+            return (list, totalCount);
         }
 
-        public List<ScheduleItem> GetAll(int userId, int? priorityLevel = null, string sortByPriority = "asc")
+        public (List<ScheduleItem> Data, int TotalCount) GetAll(
+           int userId,
+           int? priorityLevel = null,
+           string sortByPriority = "asc",
+           int page = 1,
+           int pageSize = 10)
         {
             var list = new List<ScheduleItem>();
+            int totalCount = 0;
+
             using var conn = new SqlConnection(_connStr);
             using var cmd = new SqlCommand(@"
-                SELECT * FROM ToDoEvents
-                WHERE UserId = @UserId 
-                AND IsCompleted = 0
-                AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
-                ORDER BY PriorityLevel " + (string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC") + ", DueDateTime", conn);
+        WITH Filtered AS (
+            SELECT *,
+                   COUNT(*) OVER () AS TotalCount
+            FROM ToDoEvents
+            WHERE UserId = @UserId
+            AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
+        )
+        SELECT * FROM Filtered
+        ORDER BY PriorityLevel " + (string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC") + @", DueDateTime
+        OFFSET @Offset ROWS
+        FETCH NEXT @PageSize ROWS ONLY
+    ", conn);
 
             cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
             cmd.Parameters.Add("@PriorityLevel", SqlDbType.Int).Value = (object?)priorityLevel ?? DBNull.Value;
+            cmd.Parameters.Add("@Offset", SqlDbType.Int).Value = (page - 1) * pageSize;
+            cmd.Parameters.Add("@PageSize", SqlDbType.Int).Value = pageSize;
 
             conn.Open();
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 list.Add(ReadScheduleItem(reader));
+                if (list.Count == 1) totalCount = reader.GetInt32(reader.GetOrdinal("TotalCount"));
             }
-            return list;
+
+            return (list, totalCount);
         }
+
 
         public List<PrioritizedSchedule> GetByPriority(int userId)
         {

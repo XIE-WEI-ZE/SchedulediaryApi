@@ -35,29 +35,43 @@ namespace SchedulediaryApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetByDate([FromQuery] DateTime date, [FromQuery] int? priorityLevel = null, [FromQuery] string sortByPriority = "asc")
+        public IActionResult GetByDate(
+            [FromQuery] DateTime date,
+            [FromQuery] int? priorityLevel = null,
+            [FromQuery] string sortByPriority = "asc",
+            [FromQuery] bool? isCompleted = null,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10)
         {
             var userId = GetUserIdFromClaims();
-            if (userId == null)
-            {
-                _logger.LogWarning("JWT Token解析失敗，無法取得使用者ID");
-                return Unauthorized("無法取得使用者資訊");
-            }
+            if (userId == null) return Unauthorized("無法取得使用者資訊");
 
             _logger.LogInformation("查詢行程，UserId: {UserId}, Date: {Date}", userId, date);
-            var items = _repo.GetByDate(userId.Value, date, priorityLevel, sortByPriority);
-            return Ok(items);
+            var (data, totalCount) = _repo.GetByDate(userId.Value, date, priorityLevel, sortByPriority, isCompleted, page, pageSize);
+            return Ok(new
+            {
+                Data = data,
+                TotalCount = totalCount
+            });
         }
 
+
         [HttpGet("all")]
-        public IActionResult GetAll([FromQuery] int? priorityLevel = null, [FromQuery] string sortByPriority = "asc")
+        public IActionResult GetAll(
+            [FromQuery] int? priorityLevel = null,
+            [FromQuery] string sortByPriority = "asc",
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10)
         {
             var userId = GetUserIdFromClaims();
-            if (userId == null)
-                return Unauthorized("無法取得使用者資訊");
+            if (userId == null) return Unauthorized("無法取得使用者資訊");
 
-            var items = _repo.GetAll(userId.Value, priorityLevel, sortByPriority);
-            return Ok(items);
+            var (data, totalCount) = _repo.GetAll(userId.Value, priorityLevel, sortByPriority, page, pageSize);
+            return Ok(new
+            {
+                Data = data,
+                TotalCount = totalCount
+            });
         }
 
 
@@ -151,13 +165,26 @@ namespace SchedulediaryApi.Controllers
 
         // 模糊搜尋
         [HttpGet("search")]
-        public IActionResult Search([FromQuery] string keyword, [FromQuery] bool includeCompleted = true)
+        public IActionResult Search(
+            [FromQuery] string keyword = "",
+            [FromQuery] bool includeCompleted = true,
+            [FromQuery] DateTime? startDate = null,
+            [FromQuery] DateTime? endDate = null,
+            [FromQuery] int? priorityLevel = null,
+            [FromQuery] string tag = "",
+            [FromQuery] string searchType = "any",
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10)
         {
             var userId = GetUserIdFromClaims();
             if (userId == null) return Unauthorized("無法取得使用者資訊");
 
-            var results = _repo.Search(userId.Value, keyword, includeCompleted);
-            return Ok(results);
+            var (data, totalCount) = _repo.Search(userId.Value, keyword, includeCompleted, startDate, endDate, priorityLevel, tag, searchType, page, pageSize);
+            return Ok(new
+            {
+                Data = data,
+                TotalCount = totalCount
+            });
         }
 
         // 標記完成
@@ -251,6 +278,19 @@ namespace SchedulediaryApi.Controllers
 
             var stats = _repo.GetMonthlyStats(userId.Value, year, month);
             return Ok(stats);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var userId = GetUserIdFromClaims();
+            if (userId == null) return Unauthorized("無法取得使用者資訊");
+
+            var item = _repo.GetById(id, userId.Value);
+            if (item == null)
+                return NotFound("找不到該行程或無權限存取");
+
+            return Ok(item);
         }
 
     }
