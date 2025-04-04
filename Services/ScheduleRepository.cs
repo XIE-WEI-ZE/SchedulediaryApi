@@ -18,13 +18,13 @@ namespace SchedulediaryApi.Services
         {
             using var conn = new SqlConnection(_connStr);
             using var cmd = new SqlCommand(@"
-                INSERT INTO ToDoEvents (UserId, DueDateTime, Title, Description, PriorityLevel, IsCompleted, CreatedAt, Category)
-                OUTPUT INSERTED.ToDoId
-                VALUES (@UserId, @DueDateTime, @Title, @Description, @PriorityLevel, 0, GETDATE(), @Category)
-            ", conn);
+        INSERT INTO ToDoEvents (UserId, DueDateTime, Title, Description, PriorityLevel, IsCompleted, CreatedAt, Category)
+        OUTPUT INSERTED.ToDoId
+        VALUES (@UserId, @DueDateTime, @Title, @Description, @PriorityLevel, 0, GETDATE(), @Category)
+    ", conn);
 
             cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = item.UserId;
-            cmd.Parameters.Add("@DueDateTime", SqlDbType.DateTime).Value = item.Date;
+            cmd.Parameters.Add("@DueDateTime", SqlDbType.DateTime).Value = item.DueDateTime; // 使用 DueDateTime 作為事件日期
             cmd.Parameters.Add("@Title", SqlDbType.NVarChar, 100).Value = item.Title;
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 500).Value = item.Content;
             cmd.Parameters.Add("@PriorityLevel", SqlDbType.Int).Value = item.PriorityLevel;
@@ -33,6 +33,7 @@ namespace SchedulediaryApi.Services
             conn.Open();
             return (int)cmd.ExecuteScalar();
         }
+
 
         // 確保 Update 方法存在且正確
         public void Update(ScheduleItem item)
@@ -51,18 +52,20 @@ namespace SchedulediaryApi.Services
 
             cmd.Parameters.Add("@Id", SqlDbType.Int).Value = item.Id;
             cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = item.UserId;
-            cmd.Parameters.Add("@DueDateTime", SqlDbType.DateTime).Value = item.Date;
+            cmd.Parameters.Add("@DueDateTime", SqlDbType.DateTime).Value = item.DueDateTime;  // 更新 DueDateTime
             cmd.Parameters.Add("@Title", SqlDbType.NVarChar, 100).Value = item.Title;
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 500).Value = item.Content;
             cmd.Parameters.Add("@PriorityLevel", SqlDbType.Int).Value = item.PriorityLevel;
             cmd.Parameters.Add("@Category", SqlDbType.NVarChar, 50).Value = item.Category ?? "";
-            cmd.Parameters.Add("@IsCompleted", SqlDbType.Bit).Value = item.IsCompleted; // 新增這行
+            cmd.Parameters.Add("@IsCompleted", SqlDbType.Bit).Value = item.IsCompleted;  // 更新 IsCompleted
 
             conn.Open();
             int rowsAffected = cmd.ExecuteNonQuery();
             if (rowsAffected == 0)
                 throw new Exception("行程不存在或無權更新");
         }
+
+
 
         // Search 方法
         public (List<ScheduleItem> Data, int TotalCount) Search(
@@ -82,28 +85,28 @@ namespace SchedulediaryApi.Services
 
             using var conn = new SqlConnection(_connStr);
             using var cmd = new SqlCommand(@"
-        WITH Filtered AS (
-            SELECT *,
-                   COUNT(*) OVER () AS TotalCount
-            FROM ToDoEvents
-            WHERE UserId = @UserId
-            AND (@IncludeCompleted = 1 OR IsCompleted = 0)
-            AND (@Keyword IS NULL OR (
-                (@SearchType = 'any' AND (Title LIKE @Keyword OR Description LIKE @Keyword OR Category LIKE @Keyword))
-                OR (@SearchType = 'title' AND Title LIKE @Keyword)
-                OR (@SearchType = 'content' AND Description LIKE @Keyword)
-                OR (@SearchType = 'tag' AND Category LIKE @Keyword)
-            ))
-            AND (@StartDate IS NULL OR DueDateTime >= @StartDate)
-            AND (@EndDate IS NULL OR DueDateTime <= @EndDate)
-            AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
-            AND (@Tag IS NULL OR Category LIKE @Tag)
-        )
-        SELECT * FROM Filtered
-        ORDER BY DueDateTime
-        OFFSET @Offset ROWS
-        FETCH NEXT @PageSize ROWS ONLY
-    ", conn);
+    WITH Filtered AS (
+        SELECT *,
+               COUNT(*) OVER () AS TotalCount
+        FROM ToDoEvents
+        WHERE UserId = @UserId
+        AND (@IncludeCompleted = 1 OR IsCompleted = 0)
+        AND (@Keyword IS NULL OR (
+            (@SearchType = 'any' AND (Title LIKE @Keyword OR Description LIKE @Keyword OR Category LIKE @Keyword))
+            OR (@SearchType = 'title' AND Title LIKE @Keyword)
+            OR (@SearchType = 'content' AND Description LIKE @Keyword)
+            OR (@SearchType = 'tag' AND Category LIKE @Keyword)
+        ))
+        AND (@StartDate IS NULL OR CreatedAt >= @StartDate)  -- 使用 CreatedAt 篩選
+        AND (@EndDate IS NULL OR CreatedAt <= @EndDate)      -- 使用 CreatedAt 篩選
+        AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
+        AND (@Tag IS NULL OR Category LIKE @Tag)
+    )
+    SELECT * FROM Filtered
+    ORDER BY CreatedAt DESC  -- 按照創建時間排序
+    OFFSET @Offset ROWS
+    FETCH NEXT @PageSize ROWS ONLY
+", conn);
 
             cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
             cmd.Parameters.Add("@Keyword", SqlDbType.NVarChar).Value = string.IsNullOrEmpty(keyword) ? DBNull.Value : $"%{keyword}%";
@@ -123,28 +126,30 @@ namespace SchedulediaryApi.Services
                 while (reader.Read())
                 {
                     list.Add(ReadScheduleItem(reader));
-                    if (list.Count == 1) // 只在第一行取 TotalCount
+                    if (list.Count == 1)  // 只在第一行取得 TotalCount
                         totalCount = reader.GetInt32(reader.GetOrdinal("TotalCount"));
                 }
             }
-            else
+
+            reader.Close();
+
+            if (list.Count == 0) // 若無資料，執行獨立查詢取得總筆數
             {
-                // 若無資料，執行獨立查詢取得總筆數
                 using var countCmd = new SqlCommand(@"
-            SELECT COUNT(*) FROM ToDoEvents
-            WHERE UserId = @UserId
-            AND (@IncludeCompleted = 1 OR IsCompleted = 0)
-            AND (@Keyword IS NULL OR (
-                (@SearchType = 'any' AND (Title LIKE @Keyword OR Description LIKE @Keyword OR Category LIKE @Keyword))
-                OR (@SearchType = 'title' AND Title LIKE @Keyword)
-                OR (@SearchType = 'content' AND Description LIKE @Keyword)
-                OR (@SearchType = 'tag' AND Category LIKE @Keyword)
-            ))
-            AND (@StartDate IS NULL OR DueDateTime >= @StartDate)
-            AND (@EndDate IS NULL OR DueDateTime <= @EndDate)
-            AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
-            AND (@Tag IS NULL OR Category LIKE @Tag)
-        ", conn);
+        SELECT COUNT(*) FROM ToDoEvents
+        WHERE UserId = @UserId
+        AND (@IncludeCompleted = 1 OR IsCompleted = 0)
+        AND (@Keyword IS NULL OR (
+            (@SearchType = 'any' AND (Title LIKE @Keyword OR Description LIKE @Keyword OR Category LIKE @Keyword))
+            OR (@SearchType = 'title' AND Title LIKE @Keyword)
+            OR (@SearchType = 'content' AND Description LIKE @Keyword)
+            OR (@SearchType = 'tag' AND Category LIKE @Keyword)
+        ))
+        AND (@StartDate IS NULL OR CreatedAt >= @StartDate)  -- 使用 CreatedAt 篩選
+        AND (@EndDate IS NULL OR CreatedAt <= @EndDate)      -- 使用 CreatedAt 篩選
+        AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
+        AND (@Tag IS NULL OR Category LIKE @Tag)
+    ", conn);
                 countCmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
                 countCmd.Parameters.Add("@Keyword", SqlDbType.NVarChar).Value = string.IsNullOrEmpty(keyword) ? DBNull.Value : $"%{keyword}%";
                 countCmd.Parameters.Add("@IncludeCompleted", SqlDbType.Bit).Value = includeCompleted;
@@ -159,20 +164,27 @@ namespace SchedulediaryApi.Services
             return (list, totalCount);
         }
 
+
         // 依造日期
         public (List<ScheduleItem> Data, int TotalCount) GetByDate(
-          int userId,
-          DateTime date,
-          int? priorityLevel = null,
-          string sortByPriority = "asc",
-          bool? isCompleted = null,
-          int page = 1,
-          int pageSize = 10)
+            int userId,
+            DateTime date,
+            int? priorityLevel = null,
+            string sortByPriority = "asc",
+            string? sortBy = null, // 新增參數，控制整體排序方式
+            bool? isCompleted = null,
+            int page = 1,
+            int pageSize = 10)
         {
             var list = new List<ScheduleItem>();
             int totalCount = 0;
 
             using var conn = new SqlConnection(_connStr);
+            // 根據 sortBy 動態構建 ORDER BY 子句
+            string orderByClause = sortBy == "priorityThenCreatedAt"
+                ? "PriorityLevel DESC, CreatedAt DESC" // 優先級降序，創建時間降序
+                : $"PriorityLevel {(string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC")}";
+
             using var cmd = new SqlCommand(@"
         WITH Filtered AS (
             SELECT *,
@@ -184,7 +196,7 @@ namespace SchedulediaryApi.Services
             AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
         )
         SELECT * FROM Filtered
-        ORDER BY PriorityLevel " + (string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC") + @"
+        ORDER BY " + orderByClause + @"
         OFFSET @Offset ROWS
         FETCH NEXT @PageSize ROWS ONLY
     ", conn);
@@ -206,11 +218,11 @@ namespace SchedulediaryApi.Services
 
             return (list, totalCount);
         }
-
         public (List<ScheduleItem> Data, int TotalCount) GetAll(
            int userId,
            int? priorityLevel = null,
            string sortByPriority = "asc",
+           string orderBy = "date_desc", // ✅ 新增參數
            int page = 1,
            int pageSize = 10)
         {
@@ -218,7 +230,16 @@ namespace SchedulediaryApi.Services
             int totalCount = 0;
 
             using var conn = new SqlConnection(_connStr);
-            using var cmd = new SqlCommand(@"
+
+            // ✅ 根據 orderBy 設定排序條件
+            string orderClause = orderBy switch
+            {
+                "date_asc" => "DueDateTime ASC",
+                "date_desc" => "DueDateTime DESC",
+                _ => "PriorityLevel " + (string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC") + ", DueDateTime"
+            };
+
+            using var cmd = new SqlCommand($@"
         WITH Filtered AS (
             SELECT *,
                    COUNT(*) OVER () AS TotalCount
@@ -227,7 +248,7 @@ namespace SchedulediaryApi.Services
             AND (@PriorityLevel IS NULL OR PriorityLevel = @PriorityLevel)
         )
         SELECT * FROM Filtered
-        ORDER BY PriorityLevel " + (string.Equals(sortByPriority, "desc", StringComparison.OrdinalIgnoreCase) ? "DESC" : "ASC") + @", DueDateTime
+        ORDER BY {orderClause}
         OFFSET @Offset ROWS
         FETCH NEXT @PageSize ROWS ONLY
     ", conn);
@@ -247,6 +268,7 @@ namespace SchedulediaryApi.Services
 
             return (list, totalCount);
         }
+
 
 
         public List<PrioritizedSchedule> GetByPriority(int userId)
@@ -519,12 +541,13 @@ namespace SchedulediaryApi.Services
             {
                 Id = (int)reader["ToDoId"],
                 UserId = (int)reader["UserId"],
-                Date = (DateTime)reader["DueDateTime"],
+                DueDateTime = (DateTime)reader["DueDateTime"],  // 保留 DueDateTime 用作任務的日期
                 Title = reader["Title"]?.ToString() ?? "",
                 Content = reader["Description"]?.ToString() ?? "",
                 PriorityLevel = (int)reader["PriorityLevel"],
                 IsCompleted = (bool)reader["IsCompleted"],
-                Category = reader["Category"]?.ToString() ?? ""
+                Category = reader["Category"]?.ToString() ?? "",
+                CreatedAt = (DateTime)reader["CreatedAt"] // 新增 CreatedAt
             };
         }
 

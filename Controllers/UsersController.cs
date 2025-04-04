@@ -8,6 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Google.Apis.Auth;
+
 
 namespace SchedulediaryApi.Controllers
 {
@@ -119,5 +121,60 @@ namespace SchedulediaryApi.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        [HttpPost("google-login")]
+        public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginDto dto)
+        {
+            try
+            {
+                // 從配置中讀取 Google Client ID
+                var clientId = _configuration["Google:ClientId"];
+                if (string.IsNullOrEmpty(clientId))
+                {
+                    _logger.LogError("Google Client ID 未配置");
+                    return StatusCode(500, new { message = "伺服器配置錯誤，缺少 Google Client ID" });
+                }
+
+                // 設定驗證參數
+                var settings = new GoogleJsonWebSignature.ValidationSettings
+                {
+                    Audience = new[] { clientId }
+                };
+
+                // 驗證 idToken
+                var payload = await GoogleJsonWebSignature.ValidateAsync(dto.IdToken, settings);
+                var providerId = payload.Subject;
+                var email = payload.Email;
+                var name = payload.Name;
+
+                var user = _userRepo.GetUserByProviderId(providerId);
+                if (user == null)
+                {
+                    user = new User
+                    {
+                        Name = name,
+                        Email = email,
+                        Account = email
+                    };
+
+                    _userRepo.RegisterGoogleUser(user, providerId);
+                    user = _userRepo.GetUserByAccount(email)!;
+                }
+
+                var token = GenerateJwtToken(user);
+                return Ok(new { message = "Google 登入成功", token, userId = user.UserId, name = user.Name });
+            }
+            catch (InvalidJwtException ex)
+            {
+                _logger.LogError(ex, "Google Token 驗證失敗，詳細訊息：{Message}", ex.Message);
+                return Unauthorized(new { message = "無效的 Google 登入憑證" });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Google 登入時發生錯誤，詳細訊息：{Message}", ex.Message);
+                return StatusCode(500, new { message = "伺服器錯誤，無法處理 Google 登入" });
+            }
+        }
+
     }
 }

@@ -8,7 +8,10 @@ CREATE TABLE Users (
     BirthDate DATE,
     CreatedAt DATETIME,
     AvatarPath NVARCHAR(100),
-  
+    DueDateTime NVARCHAR(50),
+    Provider¡@NVARCHAR(200),
+    EmailVerified BIT,
+    AvatarUrl NVARCHAR(200)
 );
 
 CREATE TABLE ToDoEvents (

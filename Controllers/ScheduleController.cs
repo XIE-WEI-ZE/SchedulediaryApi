@@ -39,6 +39,7 @@ namespace SchedulediaryApi.Controllers
             [FromQuery] DateTime date,
             [FromQuery] int? priorityLevel = null,
             [FromQuery] string sortByPriority = "asc",
+            [FromQuery] string? sortBy = null, 
             [FromQuery] bool? isCompleted = null,
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10)
@@ -46,27 +47,38 @@ namespace SchedulediaryApi.Controllers
             var userId = GetUserIdFromClaims();
             if (userId == null) return Unauthorized("無法取得使用者資訊");
 
-            _logger.LogInformation("查詢行程，UserId: {UserId}, Date: {Date}", userId, date);
-            var (data, totalCount) = _repo.GetByDate(userId.Value, date, priorityLevel, sortByPriority, isCompleted, page, pageSize);
+            _logger.LogInformation("查詢行程，UserId: {UserId}, Date: {Date}, SortBy: {SortBy}", userId, date, sortBy);
+            var (data, totalCount) = _repo.GetByDate(userId.Value, date, priorityLevel, sortByPriority, sortBy, isCompleted, page, pageSize);
             return Ok(new
             {
-                Data = data,
+                Data = data.Select(item => new
+                {
+                    item.Id,
+                    item.UserId,
+                    item.DueDateTime,
+                    item.CreatedAt,
+                    item.Title,
+                    item.Content,
+                    item.PriorityLevel,
+                    item.IsCompleted,
+                    item.Category
+                }),
                 TotalCount = totalCount
             });
         }
-
-
         [HttpGet("all")]
         public IActionResult GetAll(
             [FromQuery] int? priorityLevel = null,
             [FromQuery] string sortByPriority = "asc",
+            [FromQuery] string orderBy = "date_desc",
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10)
         {
             var userId = GetUserIdFromClaims();
             if (userId == null) return Unauthorized("無法取得使用者資訊");
 
-            var (data, totalCount) = _repo.GetAll(userId.Value, priorityLevel, sortByPriority, page, pageSize);
+            var (data, totalCount) = _repo.GetAll(userId.Value,
+     priorityLevel, sortByPriority, orderBy, page, pageSize);
             return Ok(new
             {
                 Data = data,
@@ -85,7 +97,7 @@ namespace SchedulediaryApi.Controllers
             if (string.IsNullOrWhiteSpace(dto.Title))
                 return BadRequest("標題不能為空");
 
-            if (dto.Date == default)
+            if (dto.DueDateTime == default)
                 return BadRequest("日期不能為空");
 
             if (!_userRepo.IsUserIdExist(userId.Value))
@@ -96,22 +108,22 @@ namespace SchedulediaryApi.Controllers
                 var item = new ScheduleItem
                 {
                     UserId = userId.Value,
-                    Date = dto.Date,
+                    DueDateTime = dto.DueDateTime,
                     Title = dto.Title,
                     Content = dto.Content,
                     PriorityLevel = dto.PriorityLevel,
-                    Category = dto.Category
+                    Category = dto.Category,
+                    IsCompleted = dto.IsCompleted
                 };
-                int newId = _repo.Add(item);
+                int newId = _repo.Add(item); // 資料庫會自動設置 CreatedAt
                 return Ok(new { message = "新增成功", id = newId });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "新增行程失敗，UserId: {UserId}", userId);
-                return StatusCode(500, $"新增失敗: {ex.Message}");
+                return StatusCode(500, new { message = $"新增失敗：{ex.Message}" });
             }
         }
-
         [HttpPut("{id}")]
         public IActionResult Update(int id, ScheduleDto dto)
         {
@@ -124,7 +136,7 @@ namespace SchedulediaryApi.Controllers
                 return NotFound("找不到該行程或無權限修改");
 
             // 預設使用原本的資料，如果 dto 裡有新值才覆蓋
-            existingItem.Date = dto.Date != default ? dto.Date : existingItem.Date;
+            existingItem.DueDateTime = dto.DueDateTime;
             existingItem.Title = !string.IsNullOrWhiteSpace(dto.Title) ? dto.Title : existingItem.Title;
             existingItem.Content = dto.Content ?? existingItem.Content;
             existingItem.PriorityLevel = dto.PriorityLevel;
@@ -142,7 +154,6 @@ namespace SchedulediaryApi.Controllers
                 return StatusCode(500, "更新失敗：" + ex.Message);
             }
         }
-
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
@@ -292,6 +303,26 @@ namespace SchedulediaryApi.Controllers
 
             return Ok(item);
         }
+
+        [HttpGet("calendar")]
+        public IActionResult GetForCalendar()
+        {
+            var userId = GetUserIdFromClaims();
+            if (userId == null)
+                return Unauthorized("無法取得使用者資訊");
+
+            var result = _repo.GetAll(userId.Value);
+            var data = result.Data.Select(x => new
+            {
+                x.Id,
+                x.Title,
+                x.DueDateTime
+            });
+
+            return Ok(new { data });
+        }
+
+
 
     }
 }

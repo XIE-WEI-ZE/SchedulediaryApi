@@ -7,7 +7,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 設定 Serilog 日誌記錄
+//  設定 Serilog 日誌記錄
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
@@ -15,17 +15,17 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-// JWT 設定
+//  讀取 JWT 設定
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 var secretKey = jwtSettings["Key"];
 
-// 驗證密鑰長度（至少 256 位元，32 字元）
+//  驗證密鑰長度（至少 32 字元 = 256 bit）
 if (string.IsNullOrEmpty(secretKey) || secretKey.Length < 32)
 {
     throw new InvalidOperationException("JWT 密鑰長度不足，請在 appsettings.json 中設置至少 32 字元的 'Jwt:Key'。");
 }
 
-// 加入 JWT 驗證
+//  加入 JWT 驗證
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -44,7 +44,7 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
     };
 
-    // 加入認證失敗時的日誌記錄
+    //  加入錯誤日誌記錄
     options.Events = new JwtBearerEvents
     {
         OnAuthenticationFailed = context =>
@@ -62,29 +62,30 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
-// 修改後的 CORS 設定（指定策略名稱）
+//  設定 CORS（允許 Angular 前端存取）
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp", policy =>
     {
-        policy.WithOrigins("http://localhost:4200") // 前端 Angular 應用程式的來源
+        policy.WithOrigins("http://localhost:4200")
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials(); // 支援 cookie（如果需要）
+              .AllowCredentials();
     });
 });
 
-// 加入 Swagger（含 JWT Bearer 支援）
+//  Swagger + JWT 認證支援
 builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "請輸入 'Bearer {token}'",
+        Description = "請在此輸入 JWT：Bearer {token}",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
+
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -96,12 +97,12 @@ builder.Services.AddSwaggerGen(c =>
                     Id = "Bearer"
                 }
             },
-            new List<string>()
+            Array.Empty<string>()
         }
     });
 });
 
-// 註冊服務
+//  加入 Controller 與服務
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<UserRepository>();
@@ -109,22 +110,31 @@ builder.Services.AddScoped<ScheduleRepository>();
 
 var app = builder.Build();
 
-// 開發環境開啟 Swagger
+//  開發環境顯示 Swagger 文件
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// 啟用中介軟體
-app.UseCors("AllowAngularApp"); // 指定 CORS 策略名稱
-app.UseHttpsRedirection();
-app.UseAuthentication(); // JWT 驗證
-app.UseAuthorization();  // 權限檢查
+//  解決 Google 登入 postMessage 警告（COOP / COEP）
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["Cross-Origin-Opener-Policy"] = "same-origin";
+    context.Response.Headers["Cross-Origin-Embedder-Policy"] = "require-corp";
+    await next();
+});
 
+//  CORS 與中介軟體配置
+app.UseCors("AllowAngularApp");
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+
+//  路由對應
 app.MapControllers();
 
-// 加入全局異常處理中介軟體（可選）
+//  全域錯誤處理
 app.UseExceptionHandler(errorApp =>
 {
     errorApp.Run(async context =>
@@ -132,7 +142,7 @@ app.UseExceptionHandler(errorApp =>
         var exceptionHandlerPathFeature = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature>();
         if (exceptionHandlerPathFeature?.Error != null)
         {
-            Log.Error(exceptionHandlerPathFeature.Error, "未處理的異常: {Message}", exceptionHandlerPathFeature.Error.Message);
+            Log.Error(exceptionHandlerPathFeature.Error, "未處理的例外: {Message}", exceptionHandlerPathFeature.Error.Message);
             context.Response.StatusCode = 500;
             await context.Response.WriteAsync("伺服器發生錯誤，請查看日誌以獲取更多資訊。");
         }
@@ -140,4 +150,3 @@ app.UseExceptionHandler(errorApp =>
 });
 
 app.Run();
-//2025-03-30
